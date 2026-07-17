@@ -33,10 +33,10 @@ GREEN = "#278A3D"
 BLUE = "#1B6CA8"
 
 W, H = 3000, 700
-# Right atmospheric panel ≈ 20 % of width (left content ≈ 80 %)
-PHOTO_X = 2380
-PHOTO_W = W - PHOTO_X  # 620
-FADE_W = 320
+# Right panel ~20 %; ultra-wide soft fade into left
+PHOTO_X = 2280
+PHOTO_W = W - PHOTO_X
+FADE_W = 680
 
 
 def esc(t: str) -> str:
@@ -122,6 +122,18 @@ def ico_leaf(cx, cy, r=14):
     </g>"""
 
 
+def ico_book(cx, cy, s=1.0, fill=GOLD):
+    """Recognizable open-book icon before Marka reference."""
+    return f"""
+    <g transform="translate({cx},{cy}) scale({s})">
+      <path d="M0 -8 L-11 -8 C-13.5 -8 -15 -6.5 -15 -4.5 V7.5 C-15 9 -13.5 10 -12 9.5
+               L0 6.5 L12 9.5 C13.5 10 15 9 15 7.5 V-4.5 C15 -6.5 13.5 -8 11 -8 Z" fill="{fill}"/>
+      <path d="M0 -8 V6.5" stroke="{NAVY}" stroke-width="1.4" opacity="0.45"/>
+      <path d="M-11 -4.5 H-3 M-11 -1 H-3 M-11 2.2 H-3" stroke="{WHITE}" stroke-width="1.1" opacity="0.85"/>
+      <path d="M3 -4.5 H11 M3 -1 H11 M3 2.2 H11" stroke="{WHITE}" stroke-width="1.1" opacity="0.85"/>
+    </g>"""
+
+
 def ico_cal_grid(cx, cy, s=1.0):
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
@@ -152,34 +164,40 @@ def ico_phone(cx, cy, fill=GOLD, s=1.15):
 def pastor_gold(cx, cy, s=1.0):
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
-      <circle r="28" fill="{GOLD}"/>
-      <circle cy="-6" r="9" fill="{WHITE}"/>
-      <path d="M-18 22 C-18 8 -10 2 0 2 C10 2 18 8 18 22 Z" fill="{WHITE}"/>
+      <circle r="26" fill="{GOLD}"/>
+      <circle cy="-5.5" r="8.2" fill="{WHITE}"/>
+      <path d="M-16.5 20 C-16.5 7.5 -9.5 2 0 2 C9.5 2 16.5 7.5 16.5 20 Z" fill="{WHITE}"/>
     </g>"""
 
 
-def wheat(cx, cy, flip=False, s=1.0):
+def burst(cx, cy, flip=False, s=1.0):
+    """Gold announcement splash inspired by reference (vector, not copied)."""
     sx = -s if flip else s
     return f"""
     <g transform="translate({cx},{cy}) scale({sx},{s})" fill="{GOLD}">
-      <path d="M0 1 C14 -10 30 -12 44 -8 C30 -4 16 0 0 1 Z" opacity="0.95"/>
-      <path d="M5 0 C18 -15 36 -20 52 -14 C36 -10 20 -2 5 0 Z" opacity="0.7"/>
-      <path d="M10 5 C24 -2 40 -2 54 4 C40 7 26 10 10 5 Z" opacity="0.85"/>
+      <path d="M-14 -18 C-10 -18 -8 -10 -8 -2 C-8 6 -10 14 -14 16 C-16 10 -17 2 -17 -2
+               C-17 -10 -16 -18 -14 -18 Z" opacity="0.5"/>
+      <ellipse cx="-12.5" cy="-4" rx="4.2" ry="12" opacity="0.85"/>
+      <circle cx="-12.5" cy="14" r="2.6" opacity="0.9"/>
+      <path d="M0 -4 C14 -18 32 -22 50 -16 C34 -12 16 -6 0 -4 Z" opacity="0.95"/>
+      <path d="M0 -1 C18 -10 40 -12 58 -6 C40 -4 18 1 0 -1 Z" opacity="1"/>
+      <path d="M0 2 C16 0 36 2 52 8 C36 6 16 5 0 2 Z" opacity="0.92"/>
+      <path d="M1 5 C14 8 30 14 46 18 C30 12 14 8 1 5 Z" opacity="0.8"/>
+      <path d="M2 8 C12 14 24 20 38 24 C24 18 12 12 2 8 Z" opacity="0.65"/>
+      <circle cx="1" cy="1" r="3.8" opacity="1"/>
     </g>"""
 
 
 def benefit_on_bg(x, y, w, icon_fn, label):
-    """White pill on the narrow right panel — larger type."""
     return f"""
     <g>
-      <rect x="{x}" y="{y}" width="{w}" height="58" rx="29" fill="{WHITE}" opacity="0.97"/>
-      {icon_fn(x + 30, y + 29, 15)}
-      {T(x + 54, y + 37, label, size=14.5, fill=NAVY, weight="700")}
+      <rect x="{x}" y="{y}" width="{w}" height="56" rx="28" fill="{WHITE}" opacity="0.97"/>
+      {icon_fn(x + 30, y + 28, 15)}
+      {T(x + 54, y + 36, label, size=14.5, fill=NAVY, weight="700")}
     </g>"""
 
 
 def day_row_item(x, y, w, num, place):
-    """Larger timeline item: calendar + number + pin + place."""
     return f"""
     <g>
       {ico_cal_grid(x + 28, y + 22, 1.45)}
@@ -190,6 +208,7 @@ def day_row_item(x, y, w, num, place):
       {T(x + 162, y + 42, place[1], size=15, fill=MUTED, weight="700", family="Open Sans")}
       {T(x + 162, y + 62, place[2] if len(place) > 2 else "", size=14, fill=MUTED, weight="500", family="Open Sans")}
     </g>"""
+
 
 
 def build_svg() -> str:
@@ -210,12 +229,11 @@ def build_svg() -> str:
         "15:00  ·  tolakandro",
         "09:00  ·  maraina",
     ]
-    # Fill left ~80 % — timeline spans almost to photo fade
-    content_right = PHOTO_X - 40
+    content_right = PHOTO_X - 60
     x0 = 40
     gap = 22
     item_w = (content_right - x0 - 3 * gap) / 4
-    timeline_y = 448
+    timeline_y = 455
     items = []
     for i, (num, place) in enumerate(zip(day_nums, places)):
         xi = x0 + i * (item_w + gap)
@@ -228,109 +246,133 @@ def build_svg() -> str:
             )
     timeline = "\n".join(items)
 
-    # Benefits on narrow right panel
-    bx = PHOTO_X + 24
-    bw = PHOTO_W - 44
-    benefits = "\n".join([
-        benefit_on_bg(bx, 55, bw, ico_flame, "Ho famonjena fanahin'olona"),
-        benefit_on_bg(bx, 130, bw, ico_star, "Ho fanasitranana ny aretina"),
-        benefit_on_bg(bx, 205, bw, ico_leaf, "Ho fiainana mandrakizay ho anao"),
-    ])
-
-    foot_y = 605
+    # Pastor flush right, slightly shorter
+    foot_y = 608
     foot_h = H - foot_y
-    pastor_x, pastor_y = 2120, 488
-    pastor_w, pastor_h = 850, 195
-    r_tl = 54
+    pastor_w, pastor_h = 780, 168
+    pastor_x = W - pastor_w
+    pastor_y = 522
+    r_tl = 48
+
+    # Benefits vertically centered above pastor overlap
+    bx = PHOTO_X + 28
+    bw = PHOTO_W - 48
+    pill_h, pill_gap, n_pills = 56, 18, 3
+    stack_h = n_pills * pill_h + (n_pills - 1) * pill_gap
+    zone_top, zone_bot = 52, pastor_y - 16
+    ben_y0 = zone_top + max(0, (zone_bot - zone_top - stack_h) / 2)
+    benefits = "\n".join([
+        benefit_on_bg(bx, ben_y0, bw, ico_flame, "Ho famonjena fanahin'olona"),
+        benefit_on_bg(bx, ben_y0 + pill_h + pill_gap, bw, ico_star, "Ho fanasitranana ny aretina"),
+        benefit_on_bg(bx, ben_y0 + 2 * (pill_h + pill_gap), bw, ico_leaf, "Ho fiainana mandrakizay ho anao"),
+    ])
 
     day_labels = []
     for i, (name, time_s) in enumerate(zip(day_names, day_times)):
         xi = x0 + i * (item_w + gap)
-        day_labels.append(T(xi + 52, 382, name, size=17, fill=GOLD, weight="800", tracking="1.2"))
-        day_labels.append(T(xi + 52, 410, time_s, size=16, fill=MUTED, weight="600", family="Open Sans"))
+        day_labels.append(T(xi + 52, 388, name, size=17, fill=GOLD, weight="800", tracking="1.2"))
+        day_labels.append(T(xi + 52, 416, time_s, size=16, fill=MUTED, weight="600", family="Open Sans"))
+
+    cta_cx = pastor_x / 2
+    cta_y = foot_y + foot_h / 2 + 8
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="{W}mm" height="{H}mm" viewBox="0 0 {W} {H}">
   <title>Fitoriana Filazantsara Lehibe — Premium</title>
-  <desc>Contenu large, fond droit 20%, bande haute pleine largeur</desc>
+  <desc>Fondu max, CTA centré, pasteur collé droite, LEHIBE dégradé</desc>
 
   <defs>
     <linearGradient id="pageBg" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="{IVORY}"/>
-      <stop offset="70%" stop-color="#FFFFFF"/>
+      <stop offset="65%" stop-color="#FFFFFF"/>
       <stop offset="100%" stop-color="#FFF6EC"/>
     </linearGradient>
     <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
-      <stop offset="22%" stop-color="#FFFFFF" stop-opacity="0.92"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
-      <stop offset="78%" stop-color="#FFF8F0" stop-opacity="0.18"/>
+      <stop offset="12%" stop-color="#FFFFFF" stop-opacity="0.97"/>
+      <stop offset="28%" stop-color="#FFFFFF" stop-opacity="0.88"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.68"/>
+      <stop offset="62%" stop-color="#FFF9F2" stop-opacity="0.42"/>
+      <stop offset="78%" stop-color="#FFF6EC" stop-opacity="0.2"/>
+      <stop offset="90%" stop-color="#FFF5E8" stop-opacity="0.07"/>
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lehibeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="{GOLD}"/>
+      <stop offset="45%" stop-color="{GOLD}"/>
+      <stop offset="72%" stop-color="{ORANGE}"/>
+      <stop offset="100%" stop-color="{NAVY}"/>
     </linearGradient>
   </defs>
 
   <rect width="{W}" height="{H}" fill="url(#pageBg)"/>
 
-  <!-- ===== RIGHT BACKGROUND (~20 %) ===== -->
   <image x="{PHOTO_X}" y="0" width="{PHOTO_W}" height="{H}"
-         preserveAspectRatio="xMidYMid slice" xlink:href="{photo}" opacity="0.92"/>
-  <rect x="{PHOTO_X - 80}" y="0" width="{FADE_W}" height="{H}" fill="url(#fadeL)"/>
+         preserveAspectRatio="xMidYMid slice" xlink:href="{photo}" opacity="0.88"/>
+  <rect x="{PHOTO_X - 280}" y="0" width="{FADE_W}" height="{H}" fill="url(#fadeL)"/>
+  <rect x="{PHOTO_X - 160}" y="0" width="360" height="{H}" fill="url(#fadeL)" opacity="0.65"/>
+  <rect x="{PHOTO_X - 60}" y="0" width="200" height="{H}" fill="url(#fadeL)" opacity="0.4"/>
 
   {benefits}
 
-  <!-- ===== TOP BAR — full width, centered ===== -->
   <rect x="0" y="0" width="{W}" height="46" fill="{NAVY}"/>
   {T(W/2, 31, "FIANGONANA JESOSY MPAMONJY  ·  MORAFENO AMBOSITRA",
      size=18, fill=WHITE, weight="700", tracking="5", anchor="middle")}
 
-  <!-- ===== HEADER (larger, fills left zone) ===== -->
-  {logo(92, 125, 1.8)}
-  <text x="185" y="112" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="58" font-weight="800" letter-spacing="1">
-    <tspan fill="{NAVY}">FITORIANA FILAZANTSARA </tspan>
-    <tspan fill="{GOLD}">LEHIBE</tspan>
+  {logo(92, 128, 1.8)}
+  <text x="185" y="115" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="56" font-weight="800" letter-spacing="1.1">
+    <tspan fill="{NAVY}">FITORIANA FILAZANTSARA</tspan>
+    <tspan dx="28" fill="url(#lehibeGrad)">LEHIBE</tspan>
   </text>
-  <text x="185" y="158" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="19" font-weight="400" font-style="italic">
+
+  <text x="185" y="164" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="23" font-weight="400" font-style="italic">
     <tspan fill="{INK}">“ Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara amin'ny olombelona rehetra. ”</tspan>
-    <tspan dx="12" fill="{GOLD}" font-style="normal" font-weight="800"
-           font-family="Montserrat, DejaVu Sans, sans-serif" font-size="19">Marka 16:15</tspan>
   </text>
-  <rect x="185" y="174" width="120" height="4.5" rx="2" fill="{GOLD}"/>
+  {ico_book(198, 194, 1.25)}
+  <text x="226" y="200" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="18" font-weight="800" fill="{GOLD}">Marka 16:15</text>
+  <rect x="185" y="214" width="120" height="4" rx="2" fill="{GOLD}"/>
 
-  <!-- ===== INVITE + DATES (spread across left 80 %) ===== -->
-  {people(100, 245, 1.35)}
-  {T(162, 222, "Ny Mpitandrina sy ny fiangonana", size=18, fill=MUTED, weight="600", family="Open Sans")}
-  {T(162, 254, "JESOSY MPAMONJY MORAFENO AMBOSITRA", size=24, fill=NAVY, weight="800")}
-  {T(162, 286, "dia faly manasa antsika rehetra", size=18, fill=MUTED, weight="600", family="Open Sans")}
+  {people(100, 268, 1.2)}
+  <text x="162" y="252" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="17" font-weight="600" fill="{MUTED}">
+    Ny Mpitandrina sy ny fiangonana
+  </text>
+  <text x="162" y="280" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="20" font-weight="800" fill="{NAVY}">
+    JESOSY MPAMONJY MORAFENO AMBOSITRA
+  </text>
+  <text x="162" y="308" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="17" font-weight="600" fill="{MUTED}">
+    dia faly manasa antsika hanatrika ny Fitoriana Filazantsara Lehibe
+  </text>
 
-  {T(1320, 222, "Hanatrika ny Fitoriana Filazantsara Lehibe", size=17, fill=MUTED, weight="600", family="Open Sans")}
-  <rect x="1240" y="240" width="380" height="64" rx="15" fill="{GOLD}"/>
-  {T(1430, 282, "6  ·  7  ·  8  ·  9", size=34, fill=NAVY, weight="800", anchor="middle")}
-  {T(1660, 282, "AOGOSITRA 2026", size=30, fill=NAVY, weight="800")}
+  <rect x="1680" y="248" width="360" height="62" rx="15" fill="{GOLD}"/>
+  {T(1860, 288, "6  ·  7  ·  8  ·  9", size=32, fill=NAVY, weight="800", anchor="middle")}
+  {T(2080, 288, "AOGOSITRA 2026", size=28, fill=NAVY, weight="800")}
 
-  <!-- ===== TIMELINE ===== -->
-  <line x1="40" y1="318" x2="{content_right}" y2="318" stroke="{LINE}" stroke-width="1.8"/>
-  {T(40, 355, "FANDAHARAM-POTOANA", size=18, fill=GOLD, weight="800", tracking="2.5")}
-  {T(360, 355, "Aogositra 2026  ·  Morafeno Ambositra", size=17, fill=MUTED, weight="600", family="Open Sans")}
+  <line x1="40" y1="330" x2="{content_right}" y2="330" stroke="{LINE}" stroke-width="1.8"/>
+  {T(40, 362, "FANDAHARAM-POTOANA", size=18, fill=GOLD, weight="800", tracking="2.5")}
+  {T(360, 362, "Aogositra 2026  ·  Morafeno Ambositra", size=17, fill=MUTED, weight="600", family="Open Sans")}
 
-  {''.join(day_labels)}
+  {"".join(day_labels)}
   {timeline}
 
-  <!-- ===== FOOTER ===== -->
   <rect x="0" y="{foot_y}" width="{W}" height="{foot_h}" fill="{NAVY}"/>
   <rect x="0" y="{foot_y}" width="{W}" height="3" fill="{GOLD}"/>
 
-  {wheat(28, foot_y + 54, False, 1.2)}
-  <text x="120" y="{foot_y + 60}" font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-        font-size="42" font-weight="400">
+  {burst(cta_cx - 560, cta_y, False, 1.25)}
+  <text x="{cta_cx}" y="{cta_y + 10}" text-anchor="middle"
+        font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
+        font-size="40" font-weight="400">
     <tspan fill="{WHITE}">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
     <tspan fill="{GOLD}">tongava handray ny anjaranao!</tspan>
   </text>
-  {wheat(pastor_x - 55, foot_y + 54, True, 1.2)}
+  {burst(cta_cx + 560, cta_y, True, 1.25)}
 
-  <!-- ===== MPITANDRINA — overflow + rounded TL ===== -->
   <path d="M{pastor_x} {pastor_y + r_tl}
            Q{pastor_x} {pastor_y} {pastor_x + r_tl} {pastor_y}
            L{pastor_x + pastor_w} {pastor_y}
@@ -344,16 +386,16 @@ def build_svg() -> str:
            L{pastor_x + 5} {pastor_y + pastor_h}
            L{pastor_x} {pastor_y + pastor_h}
            Z" fill="{GOLD}"/>
-  <path d="M{pastor_x + pastor_w - 42} {pastor_y + 20}
-           l3.2 8 8.5 1 -6.2 5.5 1.8 8.5 -7.3 -4 -7.3 4 1.8 -8.5 -6.2 -5.5 8.5 -1 z"
+  <path d="M{pastor_x + pastor_w - 40} {pastor_y + 18}
+           l3 7.5 8 1 -5.8 5 1.7 8 -6.9 -3.8 -6.9 3.8 1.7 -8 -5.8 -5 8 -1 z"
         fill="{WHITE}" opacity="0.22"/>
 
-  {pastor_gold(pastor_x + 72, pastor_y + 90, 1.1)}
-  {T(pastor_x + 118, pastor_y + 55, "Ny Mpitandrina:", size=14, fill=GOLD, weight="600")}
-  {T(pastor_x + 118, pastor_y + 90, "RANDRIANARIZANANY", size=24, fill=WHITE, weight="800")}
-  {T(pastor_x + 118, pastor_y + 118, "Lovasoa Fenomanana", size=16, fill=WHITE, weight="500", family="Open Sans")}
-  {ico_phone(pastor_x + 132, pastor_y + 152)}
-  {T(pastor_x + 152, pastor_y + 157, "Tel : 038 92 546 27  /  033 20 968 28", size=15, fill=WHITE, weight="600")}
+  {pastor_gold(pastor_x + 68, pastor_y + 82, 1.0)}
+  {T(pastor_x + 110, pastor_y + 48, "Ny Mpitandrina:", size=13, fill=GOLD, weight="600")}
+  {T(pastor_x + 110, pastor_y + 80, "RANDRIANARIZANANY", size=22, fill=WHITE, weight="800")}
+  {T(pastor_x + 110, pastor_y + 106, "Lovasoa Fenomanana", size=15, fill=WHITE, weight="500", family="Open Sans")}
+  {ico_phone(pastor_x + 124, pastor_y + 136)}
+  {T(pastor_x + 144, pastor_y + 141, "Tel : 038 92 546 27  /  033 20 968 28", size=14, fill=WHITE, weight="600")}
 </svg>
 """
 
