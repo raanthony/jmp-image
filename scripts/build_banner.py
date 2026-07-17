@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Banderole 3,00 m × 0,70 m — design élégant.
-Titre sur une ligne, citation+Marka ensemble, programme en frise.
+Banderole premium 3,00 × 0,70 m — flyer-inspired.
+Photo mains pleine hauteur à droite + dégradé, timeline iconique.
 """
 
 from __future__ import annotations
@@ -17,20 +17,22 @@ ASSETS = ROOT / "assets"
 ARTIFACTS = Path("/opt/cursor/artifacts")
 PREVIEWS = ARTIFACTS / "screenshots"
 
-NAVY = "#0A2749"
-NAVY_DARK = "#061A33"
-NAVY_SOFT = "#143A66"
-GOLD = "#D4891A"
-ORANGE = "#E89520"
+NAVY = "#071A36"
+NAVY_MID = "#0E2F58"
+GOLD = "#C97B14"
+GOLD2 = "#E59A2A"
+ORANGE = "#E08A1A"
 WHITE = "#FFFFFF"
-MUTED = "#5C6B7A"
-GRAY = "#2F3B4A"
-LINE = "#E2E8F0"
-GREEN = "#2D9B4A"
-BLUE = "#1A6FB5"
-CREAM = "#FFF9F0"
+IVORY = "#FFFCFA"
+MUTED = "#667384"
+INK = "#1A2430"
+LINE = "#E8EEF5"
+GREEN = "#278A3D"
+BLUE = "#1B6CA8"
 
 W, H = 3000, 700
+PHOTO_X = 1880  # photo starts earlier → more presence
+PHOTO_W = W - PHOTO_X
 
 
 def esc(t: str) -> str:
@@ -59,68 +61,88 @@ def data_uri(path: Path) -> str:
 def logo(cx, cy, s=1.0):
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
-      <path d="M-32 16 C-20 9 -8 9 0 13 C8 9 20 9 32 16 L32 24 C20 17 8 17 0 21 C-8 17 -20 17 -32 24 Z" fill="{NAVY}"/>
-      <path d="M-27 16 C-16 11 -7 11 0 14 C7 11 16 11 27 16" fill="none" stroke="{GOLD}" stroke-width="2"/>
-      <path d="M-22 -8 L-22 11 L22 11 L22 -8 L0 -28 Z" fill="{NAVY}"/>
-      <path d="M-28 -6 L0 -32 L28 -6" fill="none" stroke="{GOLD}" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"/>
-      <rect x="-5.5" y="-1" width="11" height="12" rx="1" fill="{GOLD}"/>
-      <circle cx="-10" cy="-11" r="3.5" fill="{GOLD}"/>
-      <circle cx="0" cy="-13" r="4.2" fill="{ORANGE}"/>
-      <circle cx="10" cy="-11" r="3.5" fill="{GOLD}"/>
-      <path d="M-15 -4.5 C-15 -8 -13 -11 -10 -11 C-7 -11 -5 -8 -5 -4.5 Z" fill="{GOLD}"/>
-      <path d="M-5.5 -3 C-5.5 -9 -3 -13.5 0 -13.5 C3 -13.5 5.5 -9 5.5 -3 Z" fill="{ORANGE}"/>
-      <path d="M5 -4.5 C5 -8 7 -11 10 -11 C13 -11 15 -8 15 -4.5 Z" fill="{GOLD}"/>
+      <path d="M-34 18 C-21 10 -8 10 0 14.5 C8 10 21 10 34 18 L34 27 C21 19 8 19 0 23.5 C-8 19 -21 19 -34 27 Z" fill="{NAVY}"/>
+      <path d="M-29 18 C-17 12.5 -7 12.5 0 15.5 C7 12.5 17 12.5 29 18" fill="none" stroke="{GOLD}" stroke-width="2.2"/>
+      <path d="M-24 -9 L-24 12 L24 12 L24 -9 L0 -31 Z" fill="{NAVY}"/>
+      <path d="M-30 -7 L0 -35 L30 -7" fill="none" stroke="{GOLD}" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="-6" y="-1" width="12" height="13" rx="1.2" fill="{GOLD}"/>
+      <circle cx="-11" cy="-12" r="3.8" fill="{GOLD}"/>
+      <circle cx="0" cy="-14.5" r="4.5" fill="{ORANGE}"/>
+      <circle cx="11" cy="-12" r="3.8" fill="{GOLD}"/>
+      <path d="M-16.5 -5 C-16.5 -8.8 -14.2 -12 -11 -12 C-7.8 -12 -5.5 -8.8 -5.5 -5 Z" fill="{GOLD}"/>
+      <path d="M-6 -3.2 C-6 -9.5 -3.2 -14.5 0 -14.5 C3.2 -14.5 6 -9.5 6 -3.2 Z" fill="{ORANGE}"/>
+      <path d="M5.5 -5 C5.5 -8.8 7.8 -12 11 -12 C14.2 -12 16.5 -8.8 16.5 -5 Z" fill="{GOLD}"/>
     </g>"""
 
 
 def people(cx, cy, s=1.0):
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
-      <circle r="22" fill="{NAVY}"/>
-      <circle cx="-8.5" cy="-4" r="4.8" fill="{GOLD}"/>
-      <circle cy="-6.5" r="5.5" fill="{ORANGE}"/>
-      <circle cx="8.5" cy="-4" r="4.8" fill="{GOLD}"/>
-      <path d="M-15 12 C-15 5.5 -12 1 -8.5 1 C-5 1 -3 4.5 -2.5 8.5" fill="{GOLD}"/>
-      <path d="M-7 14 C-7 4.5 -3.5 -1 0 -1 C3.5 -1 7 4.5 7 14 Z" fill="{ORANGE}"/>
-      <path d="M2.5 8.5 C3 4.5 5 1 8.5 1 C12 1 15 5.5 15 12" fill="{GOLD}"/>
+      <circle r="23" fill="{NAVY}"/>
+      <circle cx="-9" cy="-4.5" r="5" fill="{GOLD}"/>
+      <circle cy="-7" r="5.8" fill="{ORANGE}"/>
+      <circle cx="9" cy="-4.5" r="5" fill="{GOLD}"/>
+      <path d="M-16 13 C-16 6 -13 1 -9 1 C-5 1 -3 5 -2.5 9" fill="{GOLD}"/>
+      <path d="M-7.5 14.5 C-7.5 5 -4 -1 0 -1 C4 -1 7.5 5 7.5 14.5 Z" fill="{ORANGE}"/>
+      <path d="M2.5 9 C3 5 5.5 1 9 1 C13 1 16 6 16 13" fill="{GOLD}"/>
     </g>"""
 
 
-def flame(cx, cy, r=11):
+def ico_flame(cx, cy, r=12.5):
     return f"""
     <g transform="translate({cx},{cy})">
       <circle r="{r}" fill="{GOLD}"/>
-      <path d="M0 {r*0.55} C{-r*0.5} {r*0.05} {-r*0.42} {-r*0.35} {-r*0.15} {-r*0.7}
-               C{-r*0.05} {-r*0.25} {r*0.2} {-r*0.4} {r*0.25} {-r*0.75}
-               C{r*0.6} {-r*0.25} {r*0.55} {r*0.2} 0 {r*0.55} Z" fill="{WHITE}"/>
+      <path d="M0 {r*0.55} C{-r*0.5} {r*0.08} {-r*0.4} {-r*0.3} {-r*0.12} {-r*0.68}
+               C{-r*0.02} {-r*0.22} {r*0.18} {-r*0.38} {r*0.22} {-r*0.72}
+               C{r*0.58} {-r*0.22} {r*0.52} {r*0.22} 0 {r*0.55} Z" fill="{WHITE}"/>
     </g>"""
 
 
-def star(cx, cy, r=11):
+def ico_star(cx, cy, r=12.5):
     return f"""
     <g transform="translate({cx},{cy})">
       <circle r="{r}" fill="{BLUE}"/>
-      <path d="M0 {-r*0.55} L{r*0.14} {-r*0.15} L{r*0.55} {-r*0.15} L{r*0.22} {r*0.1}
-               L{r*0.34} {r*0.5} L0 {r*0.25} L{-r*0.34} {r*0.5} L{-r*0.22} {r*0.1}
-               L{-r*0.55} {-r*0.15} L{-r*0.14} {-r*0.15} Z" fill="{WHITE}"/>
+      <path d="M0 {-r*0.55} L{r*0.15} {-r*0.14} L{r*0.55} {-r*0.14} L{r*0.22} {r*0.12}
+               L{r*0.34} {r*0.52} L0 {r*0.26} L{-r*0.34} {r*0.52} L{-r*0.22} {r*0.12}
+               L{-r*0.55} {-r*0.14} L{-r*0.15} {-r*0.14} Z" fill="{WHITE}"/>
     </g>"""
 
 
-def leaf(cx, cy, r=11):
+def ico_leaf(cx, cy, r=12.5):
     return f"""
     <g transform="translate({cx},{cy})">
       <circle r="{r}" fill="{GREEN}"/>
-      <path d="M0 {r*0.55} C{-r*0.5} {r*0.05} {-r*0.5} {-r*0.4} 0 {-r*0.65}
-               C{r*0.5} {-r*0.4} {r*0.5} {r*0.05} 0 {r*0.55} Z" fill="{WHITE}"/>
-      <path d="M0 {r*0.45} V{-r*0.55}" stroke="{GREEN}" stroke-width="1.2"/>
+      <path d="M0 {r*0.55} C{-r*0.5} {r*0.08} {-r*0.5} {-r*0.4} 0 {-r*0.65}
+               C{r*0.5} {-r*0.4} {r*0.5} {r*0.08} 0 {r*0.55} Z" fill="{WHITE}"/>
+      <path d="M0 {r*0.42} V{-r*0.55}" stroke="{GREEN}" stroke-width="1.3"/>
     </g>"""
 
 
-def book(cx, cy, s=1.0):
+def ico_cal(cx, cy, s=1.0):
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
-      <path d="M-8 5.5 C-3.5 2.2 0 2.2 0 2.2 C0 2.2 3.5 2.2 8 5.5 V-5.5 C3.5 -8.5 0 -8.5 0 -8.5 C0 -8.5 -3.5 -8.5 -8 -5.5 Z" fill="{GOLD}"/>
-      <path d="M0 -8.5 V2.2" stroke="{WHITE}" stroke-width="1"/>
+      <rect x="-10" y="-7" width="20" height="16" rx="2.5" fill="{GOLD}"/>
+      <rect x="-10" y="-7" width="20" height="5.5" rx="2" fill="{NAVY}"/>
+      <rect x="-7.5" y="0" width="15" height="7" rx="1" fill="{WHITE}"/>
+      <circle cx="-4.5" cy="-9.5" r="1.5" fill="{NAVY}"/>
+      <circle cx="4.5" cy="-9.5" r="1.5" fill="{NAVY}"/>
+    </g>"""
+
+
+def ico_clock(cx, cy, s=1.0):
+    return f"""
+    <g transform="translate({cx},{cy}) scale({s})">
+      <circle r="9.5" fill="{WHITE}" stroke="{GOLD}" stroke-width="2.2"/>
+      <circle r="1.5" fill="{GOLD}"/>
+      <path d="M0 -5 V0 H4" fill="none" stroke="{NAVY}" stroke-width="1.9" stroke-linecap="round"/>
+    </g>"""
+
+
+def ico_pin(cx, cy, s=1.0):
+    return f"""
+    <g transform="translate({cx},{cy}) scale({s})">
+      <path d="M0 -8.5 C-5.2 -8.5 -8.5 -4 -8.5 0 C-8.5 5.2 0 11.5 0 11.5 C0 11.5 8.5 5.2 8.5 0 C8.5 -4 5.2 -8.5 0 -8.5 Z" fill="{GOLD}"/>
+      <circle cy="-0.3" r="2.6" fill="{WHITE}"/>
     </g>"""
 
 
@@ -128,162 +150,180 @@ def pastor(cx, cy, s=1.0):
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
       <circle r="15" fill="{WHITE}" opacity="0.14"/>
-      <circle cy="-4" r="5" fill="{WHITE}"/>
-      <path d="M-10 12 C-10 4 -6 0.5 0 0.5 C6 0.5 10 4 10 12 Z" fill="{WHITE}"/>
+      <circle cy="-4" r="5.2" fill="{WHITE}"/>
+      <path d="M-10.5 12.5 C-10.5 4.2 -6 0.5 0 0.5 C6 0.5 10.5 4.2 10.5 12.5 Z" fill="{WHITE}"/>
     </g>"""
 
 
 def phone(cx, cy):
     return f"""
     <g transform="translate({cx},{cy})">
-      <rect x="-4.5" y="-8" width="9" height="16" rx="2" fill="none" stroke="{GOLD}" stroke-width="1.6"/>
+      <rect x="-4.8" y="-8" width="9.6" height="16" rx="2" fill="none" stroke="{GOLD}" stroke-width="1.6"/>
       <circle cy="5.5" r="1" fill="{GOLD}"/>
     </g>"""
 
 
-def timeline_schedule() -> str:
-    """Elegant horizontal timeline — no ugly date cards."""
-    days = [
-        ("6", "ALAKAMISY", "15:00", "tolakandro"),
-        ("7", "ZOMA", "15:00", "tolakandro"),
-        ("8", "SABOTSY", "15:00", "tolakandro"),
-        ("9", "ALAHADY", "09:00", "maraina"),
-    ]
-    # Timeline across center of banner
-    y_line = 420
-    xs = [520, 1170, 1820, 2470]
-    parts = []
+def day_premium(x, y, w, h, name, num, time_s, period):
+    """Premium day block: gold number badge + icons, no heavy navy header box look."""
+    return f"""
+    <g>
+      <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="16" fill="{WHITE}"
+            stroke="{LINE}" stroke-width="1.4"/>
+      <!-- left gold accent bar -->
+      <path d="M{x} {y+16} Q{x} {y} {x+16} {y} L{x} {y} Z" fill="none"/>
+      <rect x="{x}" y="{y}" width="7" height="{h}" rx="3" fill="{GOLD}"/>
 
-    # Background soft panel
-    parts.append(
-        f'<rect x="120" y="330" width="2760" height="200" rx="20" fill="{CREAM}" stroke="{LINE}" stroke-width="1.5"/>'
-    )
-    parts.append(
-        T(W / 2, 358, "FANDAHARAM-POTOANA  ·  AOGOSITRA 2026",
-          size=14, fill=MUTED, weight="700", anchor="middle", tracking="3")
-    )
+      <!-- day name -->
+      {T(x + 28, y + 28, name, size=13, fill=GOLD, weight="800", tracking="2")}
 
-    # Connecting gold line
-    parts.append(
-        f'<line x1="{xs[0]}" y1="{y_line}" x2="{xs[-1]}" y2="{y_line}" '
-        f'stroke="{GOLD}" stroke-width="3" stroke-linecap="round"/>'
-    )
+      <!-- big number circle -->
+      <circle cx="{x + 52}" cy="{y + 78}" r="28" fill="{NAVY}"/>
+      {T(x + 52, y + 88, str(num), size=28, fill=WHITE, weight="800", anchor="middle")}
 
-    for (num, name, time, period), x in zip(days, xs):
-        parts.append(f"""
-        <g>
-          <circle cx="{x}" cy="{y_line}" r="32" fill="{GOLD}"/>
-          {T(x, y_line + 10, num, size=28, fill=WHITE, weight="800", anchor="middle")}
-          {T(x, y_line - 52, name, size=17, fill=NAVY, weight="800", anchor="middle", tracking="1.8")}
-          {T(x, y_line + 62, time, size=22, fill=NAVY, weight="800", anchor="middle")}
-          {T(x, y_line + 88, period, size=14, fill=MUTED, weight="600", anchor="middle", family="Open Sans")}
-        </g>""")
+      <!-- date label -->
+      {ico_cal(x + 105, y + 68, 1.0)}
+      {T(x + 122, y + 64, "Aogositra 2026", size=13, fill=NAVY, weight="700")}
 
-    parts.append(
-        T(W / 2, 515, "Fiangonana Jesosy Mpamonjy — Morafeno, Ambositra",
-          size=14, fill=MUTED, weight="600", anchor="middle", family="Open Sans")
-    )
-    return "\n".join(parts)
+      <!-- time -->
+      {ico_clock(x + 105, y + 100, 1.05)}
+      {T(x + 122, y + 96, time_s, size=18, fill=NAVY, weight="800")}
+      {T(x + 122, y + 118, period, size=12, fill=MUTED, weight="600", family="Open Sans")}
+    </g>"""
 
 
 def build_svg() -> str:
-    crowd_path = ASSETS / "crowd-sunset-wide.jpg"
-    if not crowd_path.exists():
-        crowd_path = ASSETS / "crowd-sunset.png"
-    crowd = data_uri(crowd_path)
+    panel = ASSETS / "crowd-right-panel.jpg"
+    photo = data_uri(panel)
 
-    px, py, pw, ph = 2320, 48, 620, 95
+    days = [
+        ("ALAKAMISY", "6", "15:00", "3 ora tolakandro"),
+        ("ZOMA", "7", "15:00", "3 ora tolakandro"),
+        ("SABOTSY", "8", "15:00", "3 ora tolakandro"),
+        ("ALAHADY", "9", "09:00", "9 ora maraina"),
+    ]
+
+    content_w = PHOTO_X - 40  # ~1840
+    card_w, gap = 400, 20
+    total = 4 * card_w + 3 * gap
+    x0 = max(50, (content_w - total) / 2)
+    cards_y = 350
+    cards = "\n".join(
+        day_premium(x0 + i * (card_w + gap), cards_y, card_w, 145, *d)
+        for i, d in enumerate(days)
+    )
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="{W}mm" height="{H}mm" viewBox="0 0 {W} {H}">
-  <title>Fitoriana Filazantsara Lehibe — 3m × 70cm</title>
-  <desc>Design élégant — titre une ligne, citation+Marka, frise programme</desc>
+  <title>Fitoriana Filazantsara Lehibe — Premium</title>
+  <desc>Design premium — photo mains pleine hauteur droite + dégradé</desc>
 
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F3F6FA"/>
+    <linearGradient id="pageBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="{IVORY}"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
-    <clipPath id="photoClip">
-      <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="12"/>
+    <!-- Wide soft fade into photo -->
+    <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="{IVORY}" stop-opacity="1"/>
+      <stop offset="45%" stop-color="{IVORY}" stop-opacity="0.75"/>
+      <stop offset="78%" stop-color="{IVORY}" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="{IVORY}" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="photoWash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A1505" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#3A1505" stop-opacity="0.05"/>
+      <stop offset="75%" stop-color="{NAVY}" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="{NAVY}" stop-opacity="0.78"/>
+    </linearGradient>
+    <clipPath id="rightClip">
+      <rect x="{PHOTO_X}" y="0" width="{PHOTO_W}" height="{H}"/>
     </clipPath>
   </defs>
 
-  <rect width="{W}" height="{H}" fill="url(#bg)"/>
+  <rect width="{W}" height="{H}" fill="url(#pageBg)"/>
+
+  <!-- FULL-HEIGHT RIGHT PHOTO -->
+  <g clip-path="url(#rightClip)">
+    <image x="{PHOTO_X - 60}" y="-20" width="{PHOTO_W + 120}" height="{H + 40}"
+           preserveAspectRatio="xMidYMid slice" xlink:href="{photo}"/>
+    <rect x="{PHOTO_X}" y="0" width="{PHOTO_W}" height="{H}" fill="url(#photoWash)"/>
+  </g>
+  <!-- Soft wide gradient blend -->
+  <rect x="{PHOTO_X - 220}" y="0" width="340" height="{H}" fill="url(#fadeL)"/>
 
   <!-- TOP BAR -->
-  <rect width="{W}" height="34" fill="{NAVY_DARK}"/>
-  {T(W/2, 23, "FIANGONANA JESOSY MPAMONJY MORAFENO AMBOSITRA",
-     size=16, fill=WHITE, weight="700", anchor="middle", tracking="5")}
+  <rect x="0" y="0" width="{PHOTO_X + 30}" height="36" fill="{NAVY}"/>
+  {T(36, 24, "FIANGONANA JESOSY MPAMONJY  ·  MORAFENO AMBOSITRA",
+     size=14, fill=WHITE, weight="700", tracking="3.2")}
 
   <!-- HEADER -->
-  {logo(85, 100, 1.3)}
-
-  <!-- TITLE ONE LINE via tspan -->
-  <text x="160" y="92" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="52" font-weight="800" letter-spacing="1.2">
+  {logo(72, 100, 1.3)}
+  <text x="145" y="88" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="46" font-weight="800" letter-spacing="0.8">
     <tspan fill="{NAVY}">FITORIANA FILAZANTSARA </tspan>
     <tspan fill="{GOLD}">LEHIBE</tspan>
   </text>
-
-  <!-- QUOTE + MARKA 16:15 together -->
-  <text x="160" y="132" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="17" font-weight="400" font-style="italic">
-    <tspan fill="{GRAY}">“ Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara amin'ny olombelona rehetra. ”</tspan>
-    <tspan dx="12" fill="{GOLD}" font-style="normal" font-weight="700" font-family="Montserrat, DejaVu Sans, sans-serif">Marka 16:15</tspan>
+  <text x="145" y="126" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="15" font-weight="400" font-style="italic">
+    <tspan fill="{INK}">“ Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara amin'ny olombelona rehetra. ”</tspan>
+    <tspan dx="8" fill="{GOLD}" font-style="normal" font-weight="800"
+           font-family="Montserrat, DejaVu Sans, sans-serif">Marka 16:15</tspan>
   </text>
+  <rect x="145" y="142" width="100" height="3" rx="1.5" fill="{GOLD}"/>
 
-  <!-- Photo -->
-  <g clip-path="url(#photoClip)">
-    <image x="{px}" y="{py}" width="{pw}" height="{ph}"
-           preserveAspectRatio="xMidYMid slice" xlink:href="{crowd}"/>
-  </g>
-  <rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="12"
-        fill="none" stroke="{GOLD}" stroke-width="2.5"/>
+  <!-- MID -->
+  {people(88, 210, 1.0)}
+  {T(130, 193, "Ny Mpitandrina sy ny fiangonana", size=13.5, fill=MUTED, weight="600", family="Open Sans")}
+  {T(130, 218, "JESOSY MPAMONJY MORAFENO AMBOSITRA", size=17, fill=NAVY, weight="800")}
+  {T(130, 242, "dia faly manasa antsika rehetra", size=13.5, fill=MUTED, weight="600", family="Open Sans")}
 
-  <line x1="80" y1="155" x2="2920" y2="155" stroke="{LINE}" stroke-width="1.5"/>
+  {T(860, 188, "Hanatrika ny Fitoriana Filazantsara Lehibe", size=12.5, fill=MUTED, weight="600", family="Open Sans")}
+  <rect x="780" y="200" width="300" height="52" rx="12" fill="{GOLD}"/>
+  {T(930, 235, "6  ·  7  ·  8  ·  9", size=28, fill=NAVY, weight="800", anchor="middle")}
+  {T(1110, 235, "AOGOSITRA 2026", size=24, fill=NAVY, weight="800")}
 
-  <!-- MID: invite | dates | benefits -->
-  {people(100, 230, 1.0)}
-  {T(145, 212, "Ny Mpitandrina sy ny fiangonana", size=15, fill=MUTED, weight="600", family="Open Sans")}
-  {T(145, 240, "JESOSY MPAMONJY MORAFENO AMBOSITRA", size=19, fill=NAVY, weight="800")}
-  {T(145, 266, "dia faly manasa antsika rehetra", size=15, fill=MUTED, weight="600", family="Open Sans")}
+  {ico_flame(1420, 198)}
+  {T(1445, 203, "Ho famonjena fanahin'olona", size=14.5, fill=NAVY, weight="700")}
+  {ico_star(1420, 232)}
+  {T(1445, 237, "Ho fanasitranana ny aretina", size=14.5, fill=NAVY, weight="700")}
+  {ico_leaf(1420, 266)}
+  {T(1445, 271, "Ho fiainana mandrakizay ho anao", size=14.5, fill=NAVY, weight="700")}
 
-  <!-- Date hero -->
-  {T(1180, 200, "Hanatrika ny Fitoriana Filazantsara Lehibe, izay atao ny",
-     size=14, fill=MUTED, weight="600", anchor="middle", family="Open Sans")}
-  <rect x="880" y="215" width="360" height="62" rx="14" fill="{GOLD}"/>
-  {T(1060, 257, "6  ·  7  ·  8  ·  9", size=34, fill=NAVY, weight="800", anchor="middle")}
-  {T(1285, 257, "AOGOSITRA 2026", size=30, fill=NAVY, weight="800")}
+  <!-- Timeline label -->
+  <line x1="55" y1="295" x2="{content_w}" y2="295" stroke="{LINE}" stroke-width="1.4"/>
+  {T(55, 325, "FANDAHARAM-POTOANA", size=13, fill=GOLD, weight="800", tracking="2.5")}
+  {T(290, 325, "Aogositra 2026  ·  Morafeno Ambositra", size=13, fill=MUTED, weight="600", family="Open Sans")}
 
-  <!-- Benefits -->
-  {flame(1750, 210)}
-  {T(1775, 215, "Ho famonjena fanahin'olona", size=17, fill=NAVY, weight="700")}
-  {star(1750, 250)}
-  {T(1775, 255, "Ho fanasitranana ny aretina", size=17, fill=NAVY, weight="700")}
-  {leaf(1750, 290)}
-  {T(1775, 295, "Ho fiainana mandrakizay ho anao", size=17, fill=NAVY, weight="700")}
+  <!-- Connecting gold timeline behind cards -->
+  <line x1="{x0 + 60}" y1="{cards_y + 78}" x2="{x0 + total - 60}" y2="{cards_y + 78}"
+        stroke="{GOLD}" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
 
-  <!-- TIMELINE SCHEDULE -->
-  {timeline_schedule()}
+  {cards}
 
-  <!-- COMPACT FOOTER -->
-  <rect x="0" y="555" width="{W}" height="145" fill="{NAVY_DARK}"/>
-  <rect x="0" y="555" width="{W}" height="5" fill="{GOLD}"/>
+  {ico_pin(content_w/2 - 190, 515, 0.85)}
+  {T(content_w/2 - 172, 520, "Fiangonana Jesosy Mpamonjy — Morafeno, Ambositra",
+     size=12.5, fill=MUTED, weight="600", family="Open Sans")}
 
-  {T(90, 610, "Anasana antsika rehetra — tongava handray ny anjaranao!",
-     size=24, fill=GOLD, family="Dancing Script", weight="700")}
-  {T(90, 645, "Fotoana lehibe ho an'ny fanahy, ny fanasitranana ary ny fiainana mandrakizay.",
-     size=14, fill="#C8D4E4", weight="500", family="Open Sans")}
+  <!-- FOOTER -->
+  <rect x="0" y="545" width="{PHOTO_X + 40}" height="155" fill="{NAVY}"/>
+  <rect x="0" y="545" width="{PHOTO_X + 40}" height="4" fill="{GOLD}"/>
 
-  <rect x="1680" y="580" width="1240" height="100" rx="12" fill="{NAVY_SOFT}"/>
-  <rect x="1680" y="580" width="6" height="100" fill="{GOLD}"/>
-  {pastor(1735, 630, 1.2)}
-  {T(1780, 610, "Ny Mpitandrina", size=13, fill=GOLD, weight="600")}
-  {T(1780, 638, "RANDRIANARIZANANY Lovasoa Fenomanana", size=18, fill=WHITE, weight="700")}
-  {phone(1790, 665)}
-  {T(1815, 670, "038 92 546 27   ·   033 20 968 28", size=16, fill=WHITE, weight="600")}
+  {T(50, 595, "Anasana antsika rehetra — tongava handray ny anjaranao!",
+     size=21, fill=GOLD, family="Dancing Script", weight="700")}
+  {T(50, 628, "Fotoana lehibe ho an'ny fanahy, ny fanasitranana ary ny fiainana mandrakizay.",
+     size=12.5, fill="#9AADC4", weight="500", family="Open Sans")}
+
+  <rect x="1050" y="568" width="760" height="110" rx="12" fill="{NAVY_MID}"/>
+  <rect x="1050" y="568" width="5" height="110" fill="{GOLD}"/>
+  {pastor(1105, 623, 1.15)}
+  {T(1145, 598, "Ny Mpitandrina", size=12, fill=GOLD, weight="600")}
+  {T(1145, 626, "RANDRIANARIZANANY Lovasoa Fenomanana", size=15.5, fill=WHITE, weight="700")}
+  {phone(1155, 655)}
+  {T(1180, 660, "038 92 546 27  ·  033 20 968 28", size=14.5, fill=WHITE, weight="600")}
+
+  {T(W - 50, 665, "Tongava!", size=30, fill=WHITE, weight="400",
+     family="Dancing Script", anchor="end")}
 </svg>
 """
 
@@ -308,7 +348,7 @@ def inkscape(svg: Path, out: Path, *, typ: str, dpi=None, width=None):
         cmd.append(f"--export-width={width}")
     r = subprocess.run(cmd, capture_output=True, text=True, env=env)
     if r.returncode != 0:
-        raise RuntimeError(r.stderr[-1200:])
+        raise RuntimeError(r.stderr[-1500:])
     print(f"OK {out.name} ({out.stat().st_size/1e6:.2f} MB)")
 
 
@@ -329,7 +369,7 @@ def main():
 
     svg = OUT / "banderole-3m-x-70cm.svg"
     svg.write_text(build_svg(), encoding="utf-8")
-    print(f"Wrote {svg}")
+    print(f"Wrote {svg} ({svg.stat().st_size/1e6:.2f} MB)")
 
     outlined = OUT / "banderole-3m-x-70cm-outlined.svg"
     outline(svg, outlined)
@@ -339,6 +379,7 @@ def main():
     inkscape(svg, preview, typ="png", width=3600)
     hd = OUT / "banderole-3m-x-70cm-150dpi.png"
     inkscape(svg, hd, typ="png", dpi=150)
+
     for p in [svg, outlined, pdf, preview]:
         shutil.copy(p, ARTIFACTS / p.name)
     from PIL import Image
