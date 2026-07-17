@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3000mm" height="700mm"
+     viewBox="0 0 3000 700" version="1.1">
+  <title>Fitoriana Filazantsara Lehibe — 6-9 Aogositra 2026 — Morafeno Ambositra</title>
+  <desc>Banderole vectorielle impression 3,00 m × 0,70 m — Fiangonana Jesosy Mpamonjy Morafeno Ambositra</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F5F8FC"/>
+      <stop offset="100%" stop-color="#E9EEF6"/>
+    </linearGradient>
+    </defs>
+
+  <rect width="3000" height="700" fill="url(#bg)"/>
+
+  <rect width="3000" height="40" fill="#071E42"/>
+  <text x="1500.0" y="27" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="700" font-style="normal" text-anchor="middle" letter-spacing="5">FIANGONANA JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
+
+  
+    <g transform="translate(95,118) scale(1.4)">
+      <path d="M-36 20 C-22 11 -8 11 0 15 C8 11 22 11 36 20 L36 28 C22 19 8 19 0 23 C-8 19 -22 19 -36 28 Z" fill="#0B2A5B"/>
+      <path d="M-31 20 C-18 13 -8 13 0 16 C8 13 18 13 31 20" fill="none" stroke="#E08A1E" stroke-width="2.2"/>
+      <path d="M0 -34 L28 -12 V14 H-28 V-12 Z" fill="#0B2A5B"/>
+      <path d="M-32 -10 L0 -36 L32 -10" fill="none" stroke="#E08A1E" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="-6.5" y="-1" width="13" height="15" rx="1.5" fill="#E08A1E"/>
+      <circle cx="-12" cy="-13" r="4.2" fill="#E08A1E"/>
+      <circle cx="0" cy="-15" r="5" fill="#F0A020"/>
+      <circle cx="12" cy="-13" r="4.2" fill="#E08A1E"/>
+      <path d="M-17.5 -5.5 C-17.5 -9.5 -15 -12.5 -12 -12.5 C-9 -12.5 -6.5 -9.5 -6.5 -5.5 Z" fill="#E08A1E"/>
+      <path d="M-6.5 -4 C-6.5 -10.5 -3.5 -15.5 0 -15.5 C3.5 -15.5 6.5 -10.5 6.5 -4 Z" fill="#F0A020"/>
+      <path d="M6.5 -5.5 C6.5 -9.5 9 -12.5 12 -12.5 C15 -12.5 17.5 -9.5 17.5 -5.5 Z" fill="#E08A1E"/>
+    </g>
+  <text x="175" y="98" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="52" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1">FITORIANA FILAZANTSARA</text>
+  <text x="175" y="155" fill="#E08A1E" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="58" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="8">LEHIBE</text>
+  
+    <defs>
+      <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FFC45A"/>
+        <stop offset="40%" stop-color="#FF8F1F"/>
+        <stop offset="75%" stop-color="#D94E0F"/>
+        <stop offset="100%" stop-color="#7A2408"/>
+      </linearGradient>
+      <clipPath id="crowdClip"><rect x="2240" y="52" width="700" height="125" rx="12"/></clipPath>
+    </defs>
+    <g clip-path="url(#crowdClip)">
+      <rect x="2240" y="52" width="700" height="125" fill="url(#sunset)"/>
+      <circle cx="2786.0" cy="97.0" r="25.0" fill="#FFE49A" opacity="0.95"/>
+      <ellipse cx="2436.0" cy="77.0" rx="112.0" ry="8.75" fill="#FFF1D0" opacity="0.45"/>
+      <ellipse cx="2625.0" cy="72.0" rx="84.0" ry="6.25" fill="#FFF1D0" opacity="0.35"/>
+      <path fill="#140C18" d="
+        M2240 177 L2240 149.5
+        C2268.0 124.5 2289.0 117.0 2317.0 124.5
+        C2331.0 107.0 2359.0 104.5 2373.0 119.5
+        C2394.0 99.5 2429.0 94.5 2443.0 117.0
+        C2471.0 89.5 2513.0 87.0 2527.0 114.5
+        C2555.0 92.0 2590.0 89.5 2604.0 117.0
+        C2632.0 94.5 2667.0 92.0 2681.0 119.5
+        C2709.0 99.5 2744.0 97.0 2758.0 122.0
+        C2786.0 104.5 2821.0 102.0 2842.0 124.5
+        C2877.0 112.0 2912.0 119.5 2940 134.5
+        L2940 177 Z"/>
+      <path d="M2380.0 119.5 C2373.0 94.5 2366.0 82.0 2373.0 72.0"
+            fill="none" stroke="#140C18" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M2520.0 114.5 C2513.0 89.5 2527.0 74.5 2534.0 67.0"
+            fill="none" stroke="#140C18" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M2660.0 119.5 C2667.0 92.0 2653.0 77.0 2660.0 68.25"
+            fill="none" stroke="#140C18" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M2786.0 122.0 C2793.0 97.0 2807.0 82.0 2800.0 73.25"
+            fill="none" stroke="#140C18" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+    <rect x="2240" y="52" width="700" height="125" rx="12" fill="none" stroke="#E08A1E" stroke-width="2.5"/>
+
+  <g>
+    <text x="90" y="205" fill="#E08A1E" font-family="Great Vibes, DejaVu Sans, sans-serif" font-size="58" font-weight="400" font-style="normal" text-anchor="start">“</text>
+    <text x="140" y="200" fill="#0B2A5B" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="400" font-style="italic" text-anchor="start">Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara</text>
+    <text x="140" y="224" fill="#0B2A5B" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="400" font-style="italic" text-anchor="start">amin'ny olombelona rehetra.</text>
+    <text x="1980" y="220" fill="#E08A1E" font-family="Great Vibes, DejaVu Sans, sans-serif" font-size="58" font-weight="400" font-style="normal" text-anchor="start">”</text>
+    
+    <g transform="translate(2055,208) scale(1.35)">
+      <path d="M-11 7 C-5 3.5 0 3.5 0 3.5 C0 3.5 5 3.5 11 7 V-7 C5 -10.5 0 -10.5 0 -10.5 C0 -10.5 -5 -10.5 -11 -7 Z" fill="#E08A1E"/>
+      <path d="M0 -10.5 V3.5" stroke="#FFFFFF" stroke-width="1.2"/>
+    </g>
+    <text x="2080" y="214" fill="#C47312" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="16" font-weight="700" font-style="normal" text-anchor="start">Marka 16:15</text>
+  </g>
+
+  <line x1="80" y1="245" x2="2920" y2="245" stroke="#E6EBF3" stroke-width="2"/>
+
+  
+    <g transform="translate(115,300) scale(1.05)">
+      <circle r="30" fill="#0B2A5B"/>
+      <circle cx="-11" cy="-5" r="6.5" fill="#E08A1E"/>
+      <circle cy="-8" r="7.5" fill="#F0A020"/>
+      <circle cx="11" cy="-5" r="6.5" fill="#E08A1E"/>
+      <path d="M-20 16 C-20 7 -15 2 -11 2 C-7 2 -4 6 -3.5 11" fill="#E08A1E"/>
+      <path d="M-9 18 C-9 6 -4 0 0 0 C4 0 9 6 9 18 Z" fill="#F0A020"/>
+      <path d="M3.5 11 C4 6 7 2 11 2 C15 2 20 7 20 16" fill="#E08A1E"/>
+    </g>
+  <text x="165" y="282" fill="#3D4A5C" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">Ny Mpitandrina sy ny fiangonana</text>
+  <text x="165" y="304" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="16" font-weight="800" font-style="normal" text-anchor="start">JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
+  <text x="165" y="326" fill="#3D4A5C" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">dia faly manasa antsika rehetra</text>
+
+  <line x1="720" y1="262" x2="720" y2="335" stroke="#E6EBF3" stroke-width="2"/>
+
+  <text x="1180" y="272" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="middle">Hanatrika ny Fitoriana Filazantsara Lehibe, izay atao ny</text>
+  <rect x="860" y="285" width="360" height="50" rx="12" fill="#E08A1E"/>
+  <text x="1040" y="319" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="30" font-weight="800" font-style="normal" text-anchor="middle">6  ·  7  ·  8  ·  9</text>
+  <text x="1250" y="319" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="24" font-weight="800" font-style="normal" text-anchor="start">AOGOSITRA 2026</text>
+  <rect x="970" y="342" width="260" height="22" rx="4" fill="#0B2A5B"/>
+  <text x="1100" y="358" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="12" font-weight="700" font-style="normal" text-anchor="middle" letter-spacing="1.6">FANDAHARAM-POTOANA</text>
+
+  <line x1="1620" y1="262" x2="1620" y2="360" stroke="#E6EBF3" stroke-width="2"/>
+
+  
+    <g transform="translate(1685,278) scale(1.05)">
+      <circle r="15" fill="#E08A1E"/>
+      <path d="M0 9 C-7 2 -6 -5 -2 -10 C-0.5 -4 2.5 -6 3.5 -11 C9 -4 8 4 0 9 Z" fill="#FFFFFF"/>
+    </g>
+  <text x="1715" y="284" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="700" font-style="normal" text-anchor="start">Ho famonjena fanahin'olona</text>
+  
+    <g transform="translate(1685,316) scale(1.05)">
+      <circle r="15" fill="#1E6BB8"/>
+      <path d="M0 -8.5 L2.1 -2.3 L8.5 -2.3 L3.3 1.4 L5.2 7.5 L0 3.8 L-5.2 7.5 L-3.3 1.4 L-8.5 -2.3 L-2.1 -2.3 Z" fill="#FFFFFF"/>
+    </g>
+  <text x="1715" y="322" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="700" font-style="normal" text-anchor="start">Ho fanasitranana ny aretina</text>
+  
+    <g transform="translate(1685,354) scale(1.05)">
+      <circle r="15" fill="#2F9E44"/>
+      <path d="M0 8.5 C-7.5 1.5 -7.5 -6 0 -9.5 C7.5 -6 7.5 1.5 0 8.5 Z" fill="#FFFFFF"/>
+      <path d="M0 7.5 V-8" stroke="#2F9E44" stroke-width="1.4"/>
+    </g>
+  <text x="1715" y="360" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="700" font-style="normal" text-anchor="start">Ho fiainana mandrakizay ho anao</text>
+
+  
+    <g>
+      <rect x="90.0" y="372" width="690" height="148" rx="10" fill="#FFFFFF" stroke="#E6EBF3" stroke-width="2"/>
+      <path d="M90.0 382 Q90.0 372 100.0 372 H770.0 Q780.0 372 780.0 382 V404 H90.0 Z" fill="#0B2A5B"/>
+      <rect x="90.0" y="397" width="690" height="8" fill="#E08A1E"/>
+      <text x="435.0" y="393" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="800" font-style="normal" text-anchor="middle" letter-spacing="1.8">ALAKAMISY</text>
+      
+    <g transform="translate(101.75,412.8) scale(0.95)">
+      <rect y="5" width="30" height="27" rx="4" fill="#E08A1E"/>
+      <rect y="5" width="30" height="9" rx="3" fill="#0B2A5B"/>
+      <rect x="2.5" y="16" width="25" height="13.5" rx="2" fill="#FFFFFF"/>
+      <circle cx="8" cy="3" r="2.2" fill="#0B2A5B"/>
+      <circle cx="22" cy="3" r="2.2" fill="#0B2A5B"/>
+      <text x="15" y="27" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="13" font-weight="800" font-style="normal" text-anchor="middle">6</text>
+    </g>
+      <text x="138.0" y="426" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="700" font-style="normal" text-anchor="start">6 Aogositra 2026</text>
+      
+    <g transform="translate(110.0,452) scale(0.95)">
+      <circle r="10.5" fill="none" stroke="#E08A1E" stroke-width="2.4"/>
+      <circle r="1.7" fill="#E08A1E"/>
+      <path d="M0 -5.5 V0 H4.8" fill="none" stroke="#0B2A5B" stroke-width="2" stroke-linecap="round"/>
+    </g>
+      <text x="128.0" y="456" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">@ 15:00  ·  3 ora tolakandro</text>
+      
+    <g transform="translate(110.0,480) scale(0.9)">
+      <path d="M0 -10 C-6.8 -10 -11 -4.2 -11 0.8 C-11 7.5 0 15 0 15 C0 15 11 7.5 11 0.8 C11 -4.2 6.8 -10 0 -10 Z" fill="#E08A1E"/>
+      <circle cy="-0.5" r="3.3" fill="#FFFFFF"/>
+    </g>
+      <text x="128.0" y="474" fill="#3D4A5C" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="12" font-weight="700" font-style="normal" text-anchor="start">Fiangonana Jesosy Mpamonjy</text>
+      <text x="128.0" y="492" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">Morafeno — Ambositra</text>
+    </g>
+
+    <g>
+      <rect x="800.0" y="372" width="690" height="148" rx="10" fill="#FFFFFF" stroke="#E6EBF3" stroke-width="2"/>
+      <path d="M800.0 382 Q800.0 372 810.0 372 H1480.0 Q1490.0 372 1490.0 382 V404 H800.0 Z" fill="#0B2A5B"/>
+      <rect x="800.0" y="397" width="690" height="8" fill="#E08A1E"/>
+      <text x="1145.0" y="393" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="800" font-style="normal" text-anchor="middle" letter-spacing="1.8">ZOMA</text>
+      
+    <g transform="translate(811.75,412.8) scale(0.95)">
+      <rect y="5" width="30" height="27" rx="4" fill="#E08A1E"/>
+      <rect y="5" width="30" height="9" rx="3" fill="#0B2A5B"/>
+      <rect x="2.5" y="16" width="25" height="13.5" rx="2" fill="#FFFFFF"/>
+      <circle cx="8" cy="3" r="2.2" fill="#0B2A5B"/>
+      <circle cx="22" cy="3" r="2.2" fill="#0B2A5B"/>
+      <text x="15" y="27" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="13" font-weight="800" font-style="normal" text-anchor="middle">7</text>
+    </g>
+      <text x="848.0" y="426" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="700" font-style="normal" text-anchor="start">7 Aogositra 2026</text>
+      
+    <g transform="translate(820.0,452) scale(0.95)">
+      <circle r="10.5" fill="none" stroke="#E08A1E" stroke-width="2.4"/>
+      <circle r="1.7" fill="#E08A1E"/>
+      <path d="M0 -5.5 V0 H4.8" fill="none" stroke="#0B2A5B" stroke-width="2" stroke-linecap="round"/>
+    </g>
+      <text x="838.0" y="456" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">@ 15:00  ·  3 ora tolakandro</text>
+      
+    <g transform="translate(820.0,480) scale(0.9)">
+      <path d="M0 -10 C-6.8 -10 -11 -4.2 -11 0.8 C-11 7.5 0 15 0 15 C0 15 11 7.5 11 0.8 C11 -4.2 6.8 -10 0 -10 Z" fill="#E08A1E"/>
+      <circle cy="-0.5" r="3.3" fill="#FFFFFF"/>
+    </g>
+      <text x="838.0" y="474" fill="#3D4A5C" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="12" font-weight="700" font-style="normal" text-anchor="start">Fiangonana Jesosy Mpamonjy</text>
+      <text x="838.0" y="492" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">Morafeno — Ambositra</text>
+    </g>
+
+    <g>
+      <rect x="1510.0" y="372" width="690" height="148" rx="10" fill="#FFFFFF" stroke="#E6EBF3" stroke-width="2"/>
+      <path d="M1510.0 382 Q1510.0 372 1520.0 372 H2190.0 Q2200.0 372 2200.0 382 V404 H1510.0 Z" fill="#0B2A5B"/>
+      <rect x="1510.0" y="397" width="690" height="8" fill="#E08A1E"/>
+      <text x="1855.0" y="393" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="800" font-style="normal" text-anchor="middle" letter-spacing="1.8">SABOTSY</text>
+      
+    <g transform="translate(1521.75,412.8) scale(0.95)">
+      <rect y="5" width="30" height="27" rx="4" fill="#E08A1E"/>
+      <rect y="5" width="30" height="9" rx="3" fill="#0B2A5B"/>
+      <rect x="2.5" y="16" width="25" height="13.5" rx="2" fill="#FFFFFF"/>
+      <circle cx="8" cy="3" r="2.2" fill="#0B2A5B"/>
+      <circle cx="22" cy="3" r="2.2" fill="#0B2A5B"/>
+      <text x="15" y="27" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="13" font-weight="800" font-style="normal" text-anchor="middle">8</text>
+    </g>
+      <text x="1558.0" y="426" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="700" font-style="normal" text-anchor="start">8 Aogositra 2026</text>
+      
+    <g transform="translate(1530.0,452) scale(0.95)">
+      <circle r="10.5" fill="none" stroke="#E08A1E" stroke-width="2.4"/>
+      <circle r="1.7" fill="#E08A1E"/>
+      <path d="M0 -5.5 V0 H4.8" fill="none" stroke="#0B2A5B" stroke-width="2" stroke-linecap="round"/>
+    </g>
+      <text x="1548.0" y="456" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">@ 15:00  ·  3 ora tolakandro</text>
+      
+    <g transform="translate(1530.0,480) scale(0.9)">
+      <path d="M0 -10 C-6.8 -10 -11 -4.2 -11 0.8 C-11 7.5 0 15 0 15 C0 15 11 7.5 11 0.8 C11 -4.2 6.8 -10 0 -10 Z" fill="#E08A1E"/>
+      <circle cy="-0.5" r="3.3" fill="#FFFFFF"/>
+    </g>
+      <text x="1548.0" y="474" fill="#3D4A5C" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="12" font-weight="700" font-style="normal" text-anchor="start">Fiangonana Jesosy Mpamonjy</text>
+      <text x="1548.0" y="492" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">Morafeno — Ambositra</text>
+    </g>
+
+    <g>
+      <rect x="2220.0" y="372" width="690" height="148" rx="10" fill="#FFFFFF" stroke="#E6EBF3" stroke-width="2"/>
+      <path d="M2220.0 382 Q2220.0 372 2230.0 372 H2900.0 Q2910.0 372 2910.0 382 V404 H2220.0 Z" fill="#0B2A5B"/>
+      <rect x="2220.0" y="397" width="690" height="8" fill="#E08A1E"/>
+      <text x="2565.0" y="393" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="800" font-style="normal" text-anchor="middle" letter-spacing="1.8">ALAHADY</text>
+      
+    <g transform="translate(2231.75,412.8) scale(0.95)">
+      <rect y="5" width="30" height="27" rx="4" fill="#E08A1E"/>
+      <rect y="5" width="30" height="9" rx="3" fill="#0B2A5B"/>
+      <rect x="2.5" y="16" width="25" height="13.5" rx="2" fill="#FFFFFF"/>
+      <circle cx="8" cy="3" r="2.2" fill="#0B2A5B"/>
+      <circle cx="22" cy="3" r="2.2" fill="#0B2A5B"/>
+      <text x="15" y="27" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="13" font-weight="800" font-style="normal" text-anchor="middle">9</text>
+    </g>
+      <text x="2268.0" y="426" fill="#0B2A5B" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="700" font-style="normal" text-anchor="start">9 Aogositra 2026</text>
+      
+    <g transform="translate(2240.0,452) scale(0.95)">
+      <circle r="10.5" fill="none" stroke="#E08A1E" stroke-width="2.4"/>
+      <circle r="1.7" fill="#E08A1E"/>
+      <path d="M0 -5.5 V0 H4.8" fill="none" stroke="#0B2A5B" stroke-width="2" stroke-linecap="round"/>
+    </g>
+      <text x="2258.0" y="456" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">@ 09:00  ·  9 ora maraina</text>
+      
+    <g transform="translate(2240.0,480) scale(0.9)">
+      <path d="M0 -10 C-6.8 -10 -11 -4.2 -11 0.8 C-11 7.5 0 15 0 15 C0 15 11 7.5 11 0.8 C11 -4.2 6.8 -10 0 -10 Z" fill="#E08A1E"/>
+      <circle cy="-0.5" r="3.3" fill="#FFFFFF"/>
+    </g>
+      <text x="2258.0" y="474" fill="#3D4A5C" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="12" font-weight="700" font-style="normal" text-anchor="start">Fiangonana Jesosy Mpamonjy</text>
+      <text x="2258.0" y="492" fill="#6B7788" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="600" font-style="normal" text-anchor="start">Morafeno — Ambositra</text>
+    </g>
+
+  <rect x="0" y="530" width="3000" height="170" fill="#071E42"/>
+  <rect x="0" y="530" width="3000" height="7" fill="#E08A1E"/>
+
+  
+    <g transform="translate(160,605) scale(1,1)" fill="#E08A1E">
+      <path d="M0 2 C18 -14 38 -18 56 -12 C38 -6 20 0 0 2 Z" opacity="0.95"/>
+      <path d="M6 0 C24 -20 46 -28 68 -22 C48 -14 28 -4 6 0 Z" opacity="0.72"/>
+      <path d="M12 6 C30 -4 50 -4 68 4 C50 8 32 12 12 6 Z" opacity="0.88"/>
+      <ellipse cx="56" cy="-12" rx="4.5" ry="2.6" transform="rotate(-22 56 -12)"/>
+      <ellipse cx="68" cy="-22" rx="4.5" ry="2.6" transform="rotate(-32 68 -22)"/>
+      <ellipse cx="68" cy="4" rx="4.5" ry="2.6" transform="rotate(-8 68 4)"/>
+    </g>
+  <text x="1000" y="595" fill="#E08A1E" font-family="Dancing Script, DejaVu Sans, sans-serif" font-size="32" font-weight="700" font-style="normal" text-anchor="middle">Anasana antsika rehetra hanatrika izany fotoana lehibe izany,</text>
+  <text x="1000" y="645" fill="#E08A1E" font-family="Dancing Script, DejaVu Sans, sans-serif" font-size="36" font-weight="700" font-style="normal" text-anchor="middle">tongava handray ny anjaranao!</text>
+  
+    <g transform="translate(1840,605) scale(-1,1)" fill="#E08A1E">
+      <path d="M0 2 C18 -14 38 -18 56 -12 C38 -6 20 0 0 2 Z" opacity="0.95"/>
+      <path d="M6 0 C24 -20 46 -28 68 -22 C48 -14 28 -4 6 0 Z" opacity="0.72"/>
+      <path d="M12 6 C30 -4 50 -4 68 4 C50 8 32 12 12 6 Z" opacity="0.88"/>
+      <ellipse cx="56" cy="-12" rx="4.5" ry="2.6" transform="rotate(-22 56 -12)"/>
+      <ellipse cx="68" cy="-22" rx="4.5" ry="2.6" transform="rotate(-32 68 -22)"/>
+      <ellipse cx="68" cy="4" rx="4.5" ry="2.6" transform="rotate(-8 68 4)"/>
+    </g>
+
+  <rect x="1980" y="555" width="940" height="120" rx="14" fill="#123A6F"/>
+  <rect x="1980" y="555" width="8" height="120" fill="#E08A1E"/>
+  
+    <g transform="translate(2050,615) scale(1.4)">
+      <circle r="20" fill="#FFFFFF" opacity="0.12"/>
+      <circle cy="-5.5" r="6.5" fill="#FFFFFF"/>
+      <path d="M-13 15 C-13 5.5 -7.5 1.5 0 1.5 C7.5 1.5 13 5.5 13 15 Z" fill="#FFFFFF"/>
+    </g>
+  <text x="2100" y="590" fill="#E08A1E" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Ny Mpitandrina</text>
+  <text x="2100" y="618" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="700" font-style="normal" text-anchor="start">RANDRIANARIZANANY Lovasoa Fenomanana</text>
+  
+    <g transform="translate(2110,652) scale(1.15)">
+      <rect x="-6.5" y="-10.5" width="13" height="21" rx="2.8" fill="none" stroke="#E08A1E" stroke-width="2"/>
+      <circle cy="7.2" r="1.4" fill="#E08A1E"/>
+      <line x1="-2.8" y1="-7.5" x2="2.8" y2="-7.5" stroke="#E08A1E" stroke-width="1.4"/>
+    </g>
+  <text x="2135" y="658" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="700" font-style="normal" text-anchor="start">038 92 546 27   /   033 20 968 28</text>
+</svg>
