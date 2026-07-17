@@ -323,10 +323,10 @@ def build_svg() -> str:
      size=19, fill=WHITE, weight="700", tracking="5", anchor="middle")}
 
   <!-- ===== LEFT CONTENT — centered as a group ===== -->
-  {logo(left_cx - 560, 118, 2.35)}
-  <text x="{left_cx}" y="118" text-anchor="middle"
+  {logo(left_cx - 680, 118, 2.1)}
+  <text x="{left_cx + 40}" y="118" text-anchor="middle"
         font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="58" font-weight="800" letter-spacing="1.2">
+        font-size="56" font-weight="800" letter-spacing="1.1">
     <tspan fill="{NAVY}">FITORIANA FILAZANTSARA</tspan>
     <tspan dx="28" fill="url(#lehibeGrad)">LEHIBE</tspan>
   </text>
