@@ -63,32 +63,66 @@ def data_uri(path: Path) -> str:
 
 
 def logo(cx, cy, s=1.0):
+    """Church community logo — exact style from capture (navy + orange)."""
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
-      <path d="M-32 17 C-20 9.5 -8 9.5 0 13.5 C8 9.5 20 9.5 32 17 L32 25.5 C20 18 8 18 0 22 C-8 18 -20 18 -32 25.5 Z" fill="{NAVY}"/>
-      <path d="M-27 17 C-16 12 -7 12 0 14.8 C7 12 16 12 27 17" fill="none" stroke="{GOLD}" stroke-width="2"/>
-      <path d="M-22 -8 L-22 11 L22 11 L22 -8 L0 -29 Z" fill="{NAVY}"/>
-      <path d="M-28 -6 L0 -33 L28 -6" fill="none" stroke="{GOLD}" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"/>
-      <rect x="-5.5" y="-1" width="11" height="12" rx="1.1" fill="{GOLD}"/>
-      <circle cx="-10" cy="-11" r="3.5" fill="{GOLD}"/>
-      <circle cx="0" cy="-13.5" r="4.2" fill="{ORANGE}"/>
-      <circle cx="10" cy="-11" r="3.5" fill="{GOLD}"/>
-      <path d="M-15 -4.5 C-15 -8 -13 -11 -10 -11 C-7 -11 -5 -8 -5 -4.5 Z" fill="{GOLD}"/>
-      <path d="M-5.5 -3 C-5.5 -9 -3 -13.5 0 -13.5 C3 -13.5 5.5 -9 5.5 -3 Z" fill="{ORANGE}"/>
-      <path d="M5 -4.5 C5 -8 7 -11 10 -11 C13 -11 15 -8 15 -4.5 Z" fill="{GOLD}"/>
+      <!-- book thickness (navy) -->
+      <path d="M-38 16.5 C-25 8 -12 8 0 13 C12 8 25 8 38 16.5
+               L38 28 C25 20 12 20 0 25 C-12 20 -25 20 -38 28 Z" fill="{NAVY}"/>
+      <!-- book pages (orange) -->
+      <path d="M-34 16.8 C-22.5 10.5 -11 10.5 0 14.8 C11 10.5 22.5 10.5 34 16.8
+               L34 24 C22.5 18.2 11 18.2 0 21.8 C-11 18.2 -22.5 18.2 -34 24 Z" fill="{ORANGE}"/>
+      <path d="M-2 15.2 L0 21.5 L2 15.2 Z" fill="{WHITE}"/>
+      <!-- house posts -->
+      <path d="M-20 -10 V14 H-13.5 V-6.5 Z" fill="{NAVY}"/>
+      <path d="M20 -10 V14 H13.5 V-6.5 Z" fill="{NAVY}"/>
+      <!-- roof outer orange -->
+      <path d="M-30 -6 L0 -34 L30 -6" fill="none" stroke="{ORANGE}" stroke-width="5.8"
+            stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- roof inner navy -->
+      <path d="M-25 -4 L0 -28 L25 -4" fill="none" stroke="{NAVY}" stroke-width="5.8"
+            stroke-linejoin="round" stroke-linecap="round"/>
+      <!-- people cluster (navy): 5 heads -->
+      <circle cx="-10.5" cy="1" r="3.5" fill="{NAVY}"/>
+      <circle cx="10.5" cy="1" r="3.5" fill="{NAVY}"/>
+      <circle cx="-5.2" cy="-5.5" r="3.3" fill="{NAVY}"/>
+      <circle cx="5.2" cy="-5.5" r="3.3" fill="{NAVY}"/>
+      <circle cx="0" cy="-11.2" r="3.8" fill="{NAVY}"/>
+      <path d="M-17.5 14.5 C-17.5 7 -14.5 3.2 -10.5 3.2 C-6.8 3.2 -4.8 6.2 -4 9.5" fill="{NAVY}"/>
+      <path d="M4 9.5 C4.8 6.2 6.8 3.2 10.5 3.2 C14.5 3.2 17.5 7 17.5 14.5" fill="{NAVY}"/>
+      <path d="M-9.5 15 C-9.5 6 -5.2 -0.8 0 -0.8 C5.2 -0.8 9.5 6 9.5 15 Z" fill="{NAVY}"/>
     </g>"""
 
 
 def people(cx, cy, s=1.0):
+    """Community care icon — navy circle + white people in cupped hands (exact capture)."""
     return f"""
     <g transform="translate({cx},{cy}) scale({s})">
-      <circle r="22" fill="{NAVY}"/>
-      <circle cx="-8.5" cy="-4" r="4.8" fill="{GOLD}"/>
-      <circle cy="-6.5" r="5.5" fill="{ORANGE}"/>
-      <circle cx="8.5" cy="-4" r="4.8" fill="{GOLD}"/>
-      <path d="M-15.5 12.5 C-15.5 5.5 -12.5 1 -8.5 1 C-4.5 1 -2.8 4.5 -2.3 8.5" fill="{GOLD}"/>
-      <path d="M-7 14 C-7 4.5 -3.5 -1 0 -1 C3.5 -1 7 4.5 7 14 Z" fill="{ORANGE}"/>
-      <path d="M2.3 8.5 C2.8 4.5 4.5 1 8.5 1 C12.5 1 15.5 5.5 15.5 12.5" fill="{GOLD}"/>
+      <circle r="24" fill="#002255"/>
+      <!-- 3 people -->
+      <circle cx="-7.8" cy="-7.2" r="4.1" fill="{WHITE}"/>
+      <circle cx="0" cy="-9.2" r="4.9" fill="{WHITE}"/>
+      <circle cx="7.8" cy="-7.2" r="4.1" fill="{WHITE}"/>
+      <path d="M-14.2 4.8 C-14.2 -0.2 -11.5 -3.2 -7.8 -3.2 C-4.5 -3.2 -2.8 0 -2.2 3.5" fill="{WHITE}"/>
+      <path d="M-6.5 7.2 C-6.5 0 -3.5 -4.5 0 -4.5 C3.5 -4.5 6.5 0 6.5 7.2 Z" fill="{WHITE}"/>
+      <path d="M2.2 3.5 C2.8 0 4.5 -3.2 7.8 -3.2 C11.5 -3.2 14.2 -0.2 14.2 4.8" fill="{WHITE}"/>
+      <!-- left cupped hand -->
+      <path d="M-19 8.5
+               C-18.2 5.5 -15 4.2 -12.2 5 C-9.8 5.6 -8 7.8 -7.2 10.5
+               C-9.5 8 -13.2 7.5 -16.2 9.2 C-17.5 10 -18.2 11.5 -18.5 13
+               C-19 16 -16.8 18.8 -13.2 19.5 C-9 20.2 -5.2 18.5 -3.2 15.5
+               C-5.8 18.2 -10.2 19.2 -13.8 17.8 C-16.2 16.8 -17.8 15 -18.2 13 Z"
+            fill="{WHITE}"/>
+      <!-- right cupped hand -->
+      <path d="M19 8.5
+               C18.2 5.5 15 4.2 12.2 5 C9.8 5.6 8 7.8 7.2 10.5
+               C9.5 8 13.2 7.5 16.2 9.2 C17.5 10 18.2 11.5 18.5 13
+               C19 16 16.8 18.8 13.2 19.5 C9 20.2 5.2 18.5 3.2 15.5
+               C5.8 18.2 10.2 19.2 13.8 17.8 C16.2 16.8 17.8 15 18.2 13 Z"
+            fill="{WHITE}"/>
+      <!-- palm bridge under people -->
+      <path d="M-7 11.5 C-4 14.5 -2 15.5 0 15.5 C2 15.5 4 14.5 7 11.5
+               C5 14.8 2.5 16.8 0 16.8 C-2.5 16.8 -5 14.8 -7 11.5 Z" fill="{WHITE}"/>
     </g>"""
 
 
