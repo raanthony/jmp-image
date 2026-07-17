@@ -22,9 +22,8 @@
     </linearGradient>
     <linearGradient id="lehibeGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#C97B14"/>
-      <stop offset="45%" stop-color="#C97B14"/>
-      <stop offset="72%" stop-color="#E08A1A"/>
-      <stop offset="100%" stop-color="#071A36"/>
+      <stop offset="88%" stop-color="#C97B14"/>
+      <stop offset="100%" stop-color="#B87518"/>
     </linearGradient>
   </defs>
 
@@ -46,7 +45,7 @@
                C-0.3 -3.3 2.6999999999999997 -5.7 3.3 -10.799999999999999
                C8.7 -3.3 7.800000000000001 3.3 0 8.25 Z" fill="#FFFFFF"/>
     </g>
-      <text x="2362" y="213.0" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14.5" font-weight="700" font-style="normal" text-anchor="start">Ho famonjena fanahin'olona</text>
+      <text x="2362" y="213.0" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="15.5" font-weight="700" font-style="normal" text-anchor="start">Ho famonjena fanahin'olona</text>
     </g>
 
     <g>
@@ -58,7 +57,7 @@
                L5.1000000000000005 7.800000000000001 L0 3.9000000000000004 L-5.1000000000000005 7.800000000000001 L-3.3 1.7999999999999998
                L-8.25 -2.1 L-2.25 -2.1 Z" fill="#FFFFFF"/>
     </g>
-      <text x="2362" y="287.0" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14.5" font-weight="700" font-style="normal" text-anchor="start">Ho fanasitranana ny aretina</text>
+      <text x="2362" y="287.0" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="15.5" font-weight="700" font-style="normal" text-anchor="start">Ho fanasitranana ny aretina</text>
     </g>
 
     <g>
@@ -70,14 +69,14 @@
                C7.5 -6.0 7.5 1.2 0 8.25 Z" fill="#FFFFFF"/>
       <path d="M0 6.3 V-8.25" stroke="#278A3D" stroke-width="1.3"/>
     </g>
-      <text x="2362" y="361.0" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14.5" font-weight="700" font-style="normal" text-anchor="start">Ho fiainana mandrakizay ho anao</text>
+      <text x="2362" y="361.0" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="15.5" font-weight="700" font-style="normal" text-anchor="start">Ho fiainana mandrakizay ho anao</text>
     </g>
 
   <rect x="0" y="0" width="3000" height="46" fill="#071A36"/>
-  <text x="1500.0" y="31" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="700" font-style="normal" text-anchor="middle" letter-spacing="5">FIANGONANA JESOSY MPAMONJY  ·  MORAFENO AMBOSITRA</text>
+  <text x="1500.0" y="31" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="19" font-weight="700" font-style="normal" text-anchor="middle" letter-spacing="5">FIANGONANA JESOSY MPAMONJY  ·  MORAFENO AMBOSITRA</text>
 
   
-    <g transform="translate(92,128) scale(1.8)">
+    <g transform="translate(95,130) scale(1.95)">
       <path d="M-32 17 C-20 9.5 -8 9.5 0 13.5 C8 9.5 20 9.5 32 17 L32 25.5 C20 18 8 18 0 22 C-8 18 -20 18 -32 25.5 Z" fill="#071A36"/>
       <path d="M-27 17 C-16 12 -7 12 0 14.8 C7 12 16 12 27 17" fill="none" stroke="#C97B14" stroke-width="2"/>
       <path d="M-22 -8 L-22 11 L22 11 L22 -8 L0 -29 Z" fill="#071A36"/>
@@ -90,30 +89,33 @@
       <path d="M-5.5 -3 C-5.5 -9 -3 -13.5 0 -13.5 C3 -13.5 5.5 -9 5.5 -3 Z" fill="#E08A1A"/>
       <path d="M5 -4.5 C5 -8 7 -11 10 -11 C13 -11 15 -8 15 -4.5 Z" fill="#C97B14"/>
     </g>
-  <text x="185" y="115" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="56" font-weight="800" letter-spacing="1.1">
+  <text x="195" y="118" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="60" font-weight="800" letter-spacing="1.2">
     <tspan fill="#071A36">FITORIANA FILAZANTSARA</tspan>
-    <tspan dx="28" fill="url(#lehibeGrad)">LEHIBE</tspan>
+    <tspan dx="30" fill="url(#lehibeGrad)">LEHIBE</tspan>
   </text>
 
-  <text x="185" y="164" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="23" font-weight="400" font-style="italic">
+  <text x="195" y="168" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="24" font-weight="400" font-style="italic">
     <tspan fill="#1A2430">“ Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara amin'ny olombelona rehetra. ”</tspan>
   </text>
   
-    <g transform="translate(198,194) scale(1.25)">
+    <g transform="translate(208,198) scale(1.35)">
       <path d="M0 -8 L-11 -8 C-13.5 -8 -15 -6.5 -15 -4.5 V7.5 C-15 9 -13.5 10 -12 9.5
                L0 6.5 L12 9.5 C13.5 10 15 9 15 7.5 V-4.5 C15 -6.5 13.5 -8 11 -8 Z" fill="#C97B14"/>
       <path d="M0 -8 V6.5" stroke="#071A36" stroke-width="1.4" opacity="0.45"/>
       <path d="M-11 -4.5 H-3 M-11 -1 H-3 M-11 2.2 H-3" stroke="#FFFFFF" stroke-width="1.1" opacity="0.85"/>
       <path d="M3 -4.5 H11 M3 -1 H11 M3 2.2 H11" stroke="#FFFFFF" stroke-width="1.1" opacity="0.85"/>
     </g>
-  <text x="226" y="200" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="18" font-weight="800" fill="#C97B14">Marka 16:15</text>
-  <rect x="185" y="214" width="120" height="4" rx="2" fill="#C97B14"/>
+  <text x="240" y="204" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="20" font-weight="800" fill="#C97B14">Marka 16:15</text>
+  <rect x="195" y="218" width="130" height="4" rx="2" fill="#C97B14"/>
 
+  <!-- ===== INVITE: two columns in one big block ===== -->
+  <rect x="70" y="232" width="1680" height="128" rx="18" fill="#F7F9FC" stroke="#DDE3EC" stroke-width="1.4"/>
+  <!-- left column -->
   
-    <g transform="translate(100,268) scale(1.2)">
+    <g transform="translate(118,296) scale(1.4)">
       <circle r="22" fill="#071A36"/>
       <circle cx="-8.5" cy="-4" r="4.8" fill="#C97B14"/>
       <circle cy="-6.5" r="5.5" fill="#E08A1A"/>
@@ -122,121 +124,123 @@
       <path d="M-7 14 C-7 4.5 -3.5 -1 0 -1 C3.5 -1 7 4.5 7 14 Z" fill="#E08A1A"/>
       <path d="M2.3 8.5 C2.8 4.5 4.5 1 8.5 1 C12.5 1 15.5 5.5 15.5 12.5" fill="#C97B14"/>
     </g>
-  <text x="162" y="252" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="17" font-weight="600" fill="#667384">
-    Ny Mpitandrina sy ny fiangonana
-  </text>
-  <text x="162" y="280" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="20" font-weight="800" fill="#071A36">
-    JESOSY MPAMONJY MORAFENO AMBOSITRA
-  </text>
-  <text x="162" y="308" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="17" font-weight="600" fill="#667384">
-    dia faly manasa antsika hanatrika ny Fitoriana Filazantsara Lehibe
-  </text>
+  <text x="175" y="268" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="19" font-weight="600" fill="#667384">Ny Mpitandrina sy ny fiangonana</text>
+  <text x="175" y="300" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="23" font-weight="800" fill="#071A36">JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
+  <text x="175" y="332" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="19" font-weight="700" fill="#C97B14">dia faly manasa antsika rehetra</text>
+  <!-- divider -->
+  <line x1="980" y1="248" x2="980" y2="344" stroke="#DDE3EC" stroke-width="1.6"/>
+  <!-- right column — date cluster more centered in its half -->
+  <text x="1365" y="268" text-anchor="middle" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="17" font-weight="600" fill="#667384">hanatrika ny Fitoriana Filazantsara Lehibe, iza atao ny</text>
+  <rect x="1120" y="284" width="300" height="58" rx="14" fill="#C97B14"/>
+  <text x="1270" y="322" text-anchor="middle" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="30" font-weight="800" fill="#071A36">6  ·  7  ·  8  ·  9</text>
+  <text x="1445" y="308" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="22" font-weight="800" fill="#071A36">AOGOSITRA</text>
+  <text x="1445" y="336" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="26" font-weight="800" fill="#071A36">2026</text>
 
-  <rect x="1680" y="248" width="360" height="62" rx="15" fill="#C97B14"/>
-  <text x="1860" y="288" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="32" font-weight="800" font-style="normal" text-anchor="middle">6  ·  7  ·  8  ·  9</text>
-  <text x="2080" y="288" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="28" font-weight="800" font-style="normal" text-anchor="start">AOGOSITRA 2026</text>
+  <line x1="40" y1="370" x2="2220" y2="370" stroke="#DDE3EC" stroke-width="1.8"/>
+  <text x="40" y="400" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="20" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="2.5">FANDAHARAM-POTOANA</text>
+  <text x="380" y="400" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="18" font-weight="600" font-style="normal" text-anchor="start">Aogositra 2026  ·  Morafeno Ambositra</text>
 
-  <line x1="40" y1="330" x2="2220" y2="330" stroke="#DDE3EC" stroke-width="1.8"/>
-  <text x="40" y="362" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="2.5">FANDAHARAM-POTOANA</text>
-  <text x="360" y="362" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="600" font-style="normal" text-anchor="start">Aogositra 2026  ·  Morafeno Ambositra</text>
-
-  <text x="92.0" y="388" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">ALAKAMISY</text><text x="92.0" y="416" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">15:00  ·  tolakandro</text><text x="642.5" y="388" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">ZOMA</text><text x="642.5" y="416" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">15:00  ·  tolakandro</text><text x="1193.0" y="388" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">SABOTSY</text><text x="1193.0" y="416" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">15:00  ·  tolakandro</text><text x="1743.5" y="388" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="17" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">ALAHADY</text><text x="1743.5" y="416" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">09:00  ·  maraina</text>
+  <text x="96.0" y="425" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">ALAKAMISY</text><text x="96.0" y="452" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="600" font-style="normal" text-anchor="start">15:00  ·  tolakandro</text><text x="646.5" y="425" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">ZOMA</text><text x="646.5" y="452" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="600" font-style="normal" text-anchor="start">15:00  ·  tolakandro</text><text x="1197.0" y="425" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">SABOTSY</text><text x="1197.0" y="452" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="600" font-style="normal" text-anchor="start">15:00  ·  tolakandro</text><text x="1747.5" y="425" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="18" font-weight="800" font-style="normal" text-anchor="start" letter-spacing="1.2">ALAHADY</text><text x="1747.5" y="452" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="17" font-weight="600" font-style="normal" text-anchor="start">09:00  ·  maraina</text>
   
     <g>
       
-    <g transform="translate(68.0,477) scale(1.45)">
+    <g transform="translate(70.0,499) scale(1.6)">
       <rect x="-9" y="-8" width="18" height="16" rx="2.2" fill="none" stroke="#071A36" stroke-width="1.8"/>
       <line x1="-9" y1="-2.5" x2="9" y2="-2.5" stroke="#071A36" stroke-width="1.5"/>
       <line x1="-3" y1="-8" x2="-3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="3" y1="-8" x2="3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="-9" y1="2.8" x2="9" y2="2.8" stroke="#071A36" stroke-width="1.1"/>
     </g>
-      <text x="92.0" y="489" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="48" font-weight="800" font-style="normal" text-anchor="start">6</text>
-      <text x="92.0" y="513" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
+      <text x="96.0" y="511" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="54" font-weight="800" font-style="normal" text-anchor="start">6</text>
+      <text x="96.0" y="537" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
       
-    <g transform="translate(185.0,481) scale(1.15)">
+    <g transform="translate(195.0,503) scale(1.25)">
       <path d="M0 -9 C-5.5 -9 -9 -4.5 -9 0 C-9 5.5 0 12 0 12 C0 12 9 5.5 9 0 C9 -4.5 5.5 -9 0 -9 Z" fill="#1B6CA8"/>
       <circle cy="-0.5" r="2.6" fill="#FFFFFF"/>
     </g>
-      <text x="202.0" y="475" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
-      <text x="202.0" y="497" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
-      <text x="202.0" y="517" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
+      <text x="214.0" y="497" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
+      <text x="214.0" y="521" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
+      <text x="214.0" y="543" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
     </g>
-<line x1="579.5" y1="459" x2="579.5" y2="527" stroke="#DDE3EC" stroke-width="1.8"/>
+<line x1="579.5" y1="479" x2="579.5" y2="547" stroke="#DDE3EC" stroke-width="1.8"/>
 
     <g>
       
-    <g transform="translate(618.5,477) scale(1.45)">
+    <g transform="translate(620.5,499) scale(1.6)">
       <rect x="-9" y="-8" width="18" height="16" rx="2.2" fill="none" stroke="#071A36" stroke-width="1.8"/>
       <line x1="-9" y1="-2.5" x2="9" y2="-2.5" stroke="#071A36" stroke-width="1.5"/>
       <line x1="-3" y1="-8" x2="-3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="3" y1="-8" x2="3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="-9" y1="2.8" x2="9" y2="2.8" stroke="#071A36" stroke-width="1.1"/>
     </g>
-      <text x="642.5" y="489" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="48" font-weight="800" font-style="normal" text-anchor="start">7</text>
-      <text x="642.5" y="513" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
+      <text x="646.5" y="511" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="54" font-weight="800" font-style="normal" text-anchor="start">7</text>
+      <text x="646.5" y="537" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
       
-    <g transform="translate(735.5,481) scale(1.15)">
+    <g transform="translate(745.5,503) scale(1.25)">
       <path d="M0 -9 C-5.5 -9 -9 -4.5 -9 0 C-9 5.5 0 12 0 12 C0 12 9 5.5 9 0 C9 -4.5 5.5 -9 0 -9 Z" fill="#1B6CA8"/>
       <circle cy="-0.5" r="2.6" fill="#FFFFFF"/>
     </g>
-      <text x="752.5" y="475" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
-      <text x="752.5" y="497" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
-      <text x="752.5" y="517" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
+      <text x="764.5" y="497" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
+      <text x="764.5" y="521" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
+      <text x="764.5" y="543" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
     </g>
-<line x1="1130.0" y1="459" x2="1130.0" y2="527" stroke="#DDE3EC" stroke-width="1.8"/>
+<line x1="1130.0" y1="479" x2="1130.0" y2="547" stroke="#DDE3EC" stroke-width="1.8"/>
 
     <g>
       
-    <g transform="translate(1169.0,477) scale(1.45)">
+    <g transform="translate(1171.0,499) scale(1.6)">
       <rect x="-9" y="-8" width="18" height="16" rx="2.2" fill="none" stroke="#071A36" stroke-width="1.8"/>
       <line x1="-9" y1="-2.5" x2="9" y2="-2.5" stroke="#071A36" stroke-width="1.5"/>
       <line x1="-3" y1="-8" x2="-3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="3" y1="-8" x2="3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="-9" y1="2.8" x2="9" y2="2.8" stroke="#071A36" stroke-width="1.1"/>
     </g>
-      <text x="1193.0" y="489" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="48" font-weight="800" font-style="normal" text-anchor="start">8</text>
-      <text x="1193.0" y="513" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
+      <text x="1197.0" y="511" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="54" font-weight="800" font-style="normal" text-anchor="start">8</text>
+      <text x="1197.0" y="537" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
       
-    <g transform="translate(1286.0,481) scale(1.15)">
+    <g transform="translate(1296.0,503) scale(1.25)">
       <path d="M0 -9 C-5.5 -9 -9 -4.5 -9 0 C-9 5.5 0 12 0 12 C0 12 9 5.5 9 0 C9 -4.5 5.5 -9 0 -9 Z" fill="#1B6CA8"/>
       <circle cy="-0.5" r="2.6" fill="#FFFFFF"/>
     </g>
-      <text x="1303.0" y="475" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
-      <text x="1303.0" y="497" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
-      <text x="1303.0" y="517" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
+      <text x="1315.0" y="497" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
+      <text x="1315.0" y="521" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
+      <text x="1315.0" y="543" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
     </g>
-<line x1="1680.5" y1="459" x2="1680.5" y2="527" stroke="#DDE3EC" stroke-width="1.8"/>
+<line x1="1680.5" y1="479" x2="1680.5" y2="547" stroke="#DDE3EC" stroke-width="1.8"/>
 
     <g>
       
-    <g transform="translate(1719.5,477) scale(1.45)">
+    <g transform="translate(1721.5,499) scale(1.6)">
       <rect x="-9" y="-8" width="18" height="16" rx="2.2" fill="none" stroke="#071A36" stroke-width="1.8"/>
       <line x1="-9" y1="-2.5" x2="9" y2="-2.5" stroke="#071A36" stroke-width="1.5"/>
       <line x1="-3" y1="-8" x2="-3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="3" y1="-8" x2="3" y2="8" stroke="#071A36" stroke-width="1.1"/>
       <line x1="-9" y1="2.8" x2="9" y2="2.8" stroke="#071A36" stroke-width="1.1"/>
     </g>
-      <text x="1743.5" y="489" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="48" font-weight="800" font-style="normal" text-anchor="start">9</text>
-      <text x="1743.5" y="513" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
+      <text x="1747.5" y="511" fill="#071A36" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="54" font-weight="800" font-style="normal" text-anchor="start">9</text>
+      <text x="1747.5" y="537" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">Aogositra</text>
       
-    <g transform="translate(1836.5,481) scale(1.15)">
+    <g transform="translate(1846.5,503) scale(1.25)">
       <path d="M0 -9 C-5.5 -9 -9 -4.5 -9 0 C-9 5.5 0 12 0 12 C0 12 9 5.5 9 0 C9 -4.5 5.5 -9 0 -9 Z" fill="#1B6CA8"/>
       <circle cy="-0.5" r="2.6" fill="#FFFFFF"/>
     </g>
-      <text x="1853.5" y="475" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
-      <text x="1853.5" y="497" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
-      <text x="1853.5" y="517" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
+      <text x="1865.5" y="497" fill="#1A2430" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="600" font-style="normal" text-anchor="start">ao @ Fiangonana</text>
+      <text x="1865.5" y="521" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="700" font-style="normal" text-anchor="start">JESOSY MPAMONJY</text>
+      <text x="1865.5" y="543" fill="#667384" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="500" font-style="normal" text-anchor="start">Morafeno</text>
     </g>
 
   <rect x="0" y="608" width="3000" height="92" fill="#071A36"/>
   <rect x="0" y="608" width="3000" height="3" fill="#C97B14"/>
 
   
-    <g transform="translate(550.0,662.0) scale(1.25,1.25)" fill="#C97B14">
+    <g transform="translate(410.0,662.0) scale(1.2,1.2)" fill="#C97B14">
       <path d="M-14 -18 C-10 -18 -8 -10 -8 -2 C-8 6 -10 14 -14 16 C-16 10 -17 2 -17 -2
                C-17 -10 -16 -18 -14 -18 Z" opacity="0.5"/>
       <ellipse cx="-12.5" cy="-4" rx="4.2" ry="12" opacity="0.85"/>
@@ -250,12 +254,12 @@
     </g>
   <text x="1110.0" y="672.0" text-anchor="middle"
         font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-        font-size="40" font-weight="400">
+        font-size="42" font-weight="400">
     <tspan fill="#FFFFFF">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
     <tspan fill="#C97B14">tongava handray ny anjaranao!</tspan>
   </text>
   
-    <g transform="translate(1670.0,662.0) scale(-1.25,1.25)" fill="#C97B14">
+    <g transform="translate(1810.0,662.0) scale(-1.2,1.2)" fill="#C97B14">
       <path d="M-14 -18 C-10 -18 -8 -10 -8 -2 C-8 6 -10 14 -14 16 C-16 10 -17 2 -17 -2
                C-17 -10 -16 -18 -14 -18 Z" opacity="0.5"/>
       <ellipse cx="-12.5" cy="-4" rx="4.2" ry="12" opacity="0.85"/>
@@ -291,13 +295,13 @@
       <circle cy="-5.5" r="8.2" fill="#FFFFFF"/>
       <path d="M-16.5 20 C-16.5 7.5 -9.5 2 0 2 C9.5 2 16.5 7.5 16.5 20 Z" fill="#FFFFFF"/>
     </g>
-  <text x="2330" y="570" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="13" font-weight="600" font-style="normal" text-anchor="start">Ny Mpitandrina:</text>
-  <text x="2330" y="602" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="22" font-weight="800" font-style="normal" text-anchor="start">RANDRIANARIZANANY</text>
-  <text x="2330" y="628" fill="#FFFFFF" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="15" font-weight="500" font-style="normal" text-anchor="start">Lovasoa Fenomanana</text>
+  <text x="2330" y="570" fill="#C97B14" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Ny Mpitandrina:</text>
+  <text x="2330" y="602" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="24" font-weight="800" font-style="normal" text-anchor="start">RANDRIANARIZANANY</text>
+  <text x="2330" y="630" fill="#FFFFFF" font-family="Open Sans, DejaVu Sans, sans-serif" font-size="16" font-weight="500" font-style="normal" text-anchor="start">Lovasoa Fenomanana</text>
   
-    <g transform="translate(2344,658) scale(1.15)">
+    <g transform="translate(2344,660) scale(1.15)">
       <rect x="-5" y="-8.5" width="10" height="17" rx="2.2" fill="none" stroke="#C97B14" stroke-width="1.6"/>
       <circle cy="5.8" r="1.1" fill="#C97B14"/>
     </g>
-  <text x="2364" y="663" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="14" font-weight="600" font-style="normal" text-anchor="start">Tel : 038 92 546 27  /  033 20 968 28</text>
+  <text x="2364" y="665" fill="#FFFFFF" font-family="Montserrat, DejaVu Sans, sans-serif" font-size="15" font-weight="600" font-style="normal" text-anchor="start">Tel : 038 92 546 27  /  033 20 968 28</text>
 </svg>

@@ -193,20 +193,20 @@ def benefit_on_bg(x, y, w, icon_fn, label):
     <g>
       <rect x="{x}" y="{y}" width="{w}" height="56" rx="28" fill="{WHITE}" opacity="0.97"/>
       {icon_fn(x + 30, y + 28, 15)}
-      {T(x + 54, y + 36, label, size=14.5, fill=NAVY, weight="700")}
+      {T(x + 54, y + 36, label, size=15.5, fill=NAVY, weight="700")}
     </g>"""
 
 
 def day_row_item(x, y, w, num, place):
     return f"""
     <g>
-      {ico_cal_grid(x + 28, y + 22, 1.45)}
-      {T(x + 52, y + 34, str(num), size=48, fill=NAVY, weight="800")}
-      {T(x + 52, y + 58, "Aogositra", size=14, fill=MUTED, weight="600", family="Open Sans")}
-      {ico_pin(x + 145, y + 26, 1.15, fill=BLUE)}
-      {T(x + 162, y + 20, place[0], size=15, fill=INK, weight="600", family="Open Sans")}
-      {T(x + 162, y + 42, place[1], size=15, fill=MUTED, weight="700", family="Open Sans")}
-      {T(x + 162, y + 62, place[2] if len(place) > 2 else "", size=14, fill=MUTED, weight="500", family="Open Sans")}
+      {ico_cal_grid(x + 30, y + 24, 1.6)}
+      {T(x + 56, y + 36, str(num), size=54, fill=NAVY, weight="800")}
+      {T(x + 56, y + 62, "Aogositra", size=15, fill=MUTED, weight="600", family="Open Sans")}
+      {ico_pin(x + 155, y + 28, 1.25, fill=BLUE)}
+      {T(x + 174, y + 22, place[0], size=16, fill=INK, weight="600", family="Open Sans")}
+      {T(x + 174, y + 46, place[1], size=16, fill=MUTED, weight="700", family="Open Sans")}
+      {T(x + 174, y + 68, place[2] if len(place) > 2 else "", size=15, fill=MUTED, weight="500", family="Open Sans")}
     </g>"""
 
 
@@ -233,7 +233,7 @@ def build_svg() -> str:
     x0 = 40
     gap = 22
     item_w = (content_right - x0 - 3 * gap) / 4
-    timeline_y = 455
+    timeline_y = 475
     items = []
     for i, (num, place) in enumerate(zip(day_nums, places)):
         xi = x0 + i * (item_w + gap)
@@ -270,8 +270,8 @@ def build_svg() -> str:
     day_labels = []
     for i, (name, time_s) in enumerate(zip(day_names, day_times)):
         xi = x0 + i * (item_w + gap)
-        day_labels.append(T(xi + 52, 388, name, size=17, fill=GOLD, weight="800", tracking="1.2"))
-        day_labels.append(T(xi + 52, 416, time_s, size=16, fill=MUTED, weight="600", family="Open Sans"))
+        day_labels.append(T(xi + 56, 425, name, size=18, fill=GOLD, weight="800", tracking="1.2"))
+        day_labels.append(T(xi + 56, 452, time_s, size=17, fill=MUTED, weight="600", family="Open Sans"))
 
     cta_cx = pastor_x / 2
     cta_y = foot_y + foot_h / 2 + 8
@@ -300,9 +300,8 @@ def build_svg() -> str:
     </linearGradient>
     <linearGradient id="lehibeGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="{GOLD}"/>
-      <stop offset="45%" stop-color="{GOLD}"/>
-      <stop offset="72%" stop-color="{ORANGE}"/>
-      <stop offset="100%" stop-color="{NAVY}"/>
+      <stop offset="88%" stop-color="{GOLD}"/>
+      <stop offset="100%" stop-color="#B87518"/>
     </linearGradient>
   </defs>
 
@@ -318,45 +317,50 @@ def build_svg() -> str:
 
   <rect x="0" y="0" width="{W}" height="46" fill="{NAVY}"/>
   {T(W/2, 31, "FIANGONANA JESOSY MPAMONJY  ·  MORAFENO AMBOSITRA",
-     size=18, fill=WHITE, weight="700", tracking="5", anchor="middle")}
+     size=19, fill=WHITE, weight="700", tracking="5", anchor="middle")}
 
-  {logo(92, 128, 1.8)}
-  <text x="185" y="115" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="56" font-weight="800" letter-spacing="1.1">
+  {logo(95, 130, 1.95)}
+  <text x="195" y="118" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="60" font-weight="800" letter-spacing="1.2">
     <tspan fill="{NAVY}">FITORIANA FILAZANTSARA</tspan>
-    <tspan dx="28" fill="url(#lehibeGrad)">LEHIBE</tspan>
+    <tspan dx="30" fill="url(#lehibeGrad)">LEHIBE</tspan>
   </text>
 
-  <text x="185" y="164" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="23" font-weight="400" font-style="italic">
+  <text x="195" y="168" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="24" font-weight="400" font-style="italic">
     <tspan fill="{INK}">“ Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara amin'ny olombelona rehetra. ”</tspan>
   </text>
-  {ico_book(198, 194, 1.25)}
-  <text x="226" y="200" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="18" font-weight="800" fill="{GOLD}">Marka 16:15</text>
-  <rect x="185" y="214" width="120" height="4" rx="2" fill="{GOLD}"/>
+  {ico_book(208, 198, 1.35)}
+  <text x="240" y="204" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="20" font-weight="800" fill="{GOLD}">Marka 16:15</text>
+  <rect x="195" y="218" width="130" height="4" rx="2" fill="{GOLD}"/>
 
-  {people(100, 268, 1.2)}
-  <text x="162" y="252" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="17" font-weight="600" fill="{MUTED}">
-    Ny Mpitandrina sy ny fiangonana
-  </text>
-  <text x="162" y="280" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="20" font-weight="800" fill="{NAVY}">
-    JESOSY MPAMONJY MORAFENO AMBOSITRA
-  </text>
-  <text x="162" y="308" font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="17" font-weight="600" fill="{MUTED}">
-    dia faly manasa antsika hanatrika ny Fitoriana Filazantsara Lehibe
-  </text>
+  <!-- ===== INVITE: two columns in one big block ===== -->
+  <rect x="70" y="232" width="1680" height="128" rx="18" fill="#F7F9FC" stroke="{LINE}" stroke-width="1.4"/>
+  <!-- left column -->
+  {people(118, 296, 1.4)}
+  <text x="175" y="268" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="19" font-weight="600" fill="{MUTED}">Ny Mpitandrina sy ny fiangonana</text>
+  <text x="175" y="300" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="23" font-weight="800" fill="{NAVY}">JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
+  <text x="175" y="332" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="19" font-weight="700" fill="{GOLD}">dia faly manasa antsika rehetra</text>
+  <!-- divider -->
+  <line x1="980" y1="248" x2="980" y2="344" stroke="{LINE}" stroke-width="1.6"/>
+  <!-- right column — date cluster more centered in its half -->
+  <text x="1365" y="268" text-anchor="middle" font-family="Open Sans, DejaVu Sans, sans-serif"
+        font-size="17" font-weight="600" fill="{MUTED}">hanatrika ny Fitoriana Filazantsara Lehibe, iza atao ny</text>
+  <rect x="1120" y="284" width="300" height="58" rx="14" fill="{GOLD}"/>
+  <text x="1270" y="322" text-anchor="middle" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="30" font-weight="800" fill="{NAVY}">6  ·  7  ·  8  ·  9</text>
+  <text x="1445" y="308" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="22" font-weight="800" fill="{NAVY}">AOGOSITRA</text>
+  <text x="1445" y="336" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="26" font-weight="800" fill="{NAVY}">2026</text>
 
-  <rect x="1680" y="248" width="360" height="62" rx="15" fill="{GOLD}"/>
-  {T(1860, 288, "6  ·  7  ·  8  ·  9", size=32, fill=NAVY, weight="800", anchor="middle")}
-  {T(2080, 288, "AOGOSITRA 2026", size=28, fill=NAVY, weight="800")}
-
-  <line x1="40" y1="330" x2="{content_right}" y2="330" stroke="{LINE}" stroke-width="1.8"/>
-  {T(40, 362, "FANDAHARAM-POTOANA", size=18, fill=GOLD, weight="800", tracking="2.5")}
-  {T(360, 362, "Aogositra 2026  ·  Morafeno Ambositra", size=17, fill=MUTED, weight="600", family="Open Sans")}
+  <line x1="40" y1="370" x2="{content_right}" y2="370" stroke="{LINE}" stroke-width="1.8"/>
+  {T(40, 400, "FANDAHARAM-POTOANA", size=20, fill=GOLD, weight="800", tracking="2.5")}
+  {T(380, 400, "Aogositra 2026  ·  Morafeno Ambositra", size=18, fill=MUTED, weight="600", family="Open Sans")}
 
   {"".join(day_labels)}
   {timeline}
@@ -364,14 +368,14 @@ def build_svg() -> str:
   <rect x="0" y="{foot_y}" width="{W}" height="{foot_h}" fill="{NAVY}"/>
   <rect x="0" y="{foot_y}" width="{W}" height="3" fill="{GOLD}"/>
 
-  {burst(cta_cx - 560, cta_y, False, 1.25)}
+  {burst(cta_cx - 700, cta_y, False, 1.2)}
   <text x="{cta_cx}" y="{cta_y + 10}" text-anchor="middle"
         font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-        font-size="40" font-weight="400">
+        font-size="42" font-weight="400">
     <tspan fill="{WHITE}">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
     <tspan fill="{GOLD}">tongava handray ny anjaranao!</tspan>
   </text>
-  {burst(cta_cx + 560, cta_y, True, 1.25)}
+  {burst(cta_cx + 700, cta_y, True, 1.2)}
 
   <path d="M{pastor_x} {pastor_y + r_tl}
            Q{pastor_x} {pastor_y} {pastor_x + r_tl} {pastor_y}
@@ -391,11 +395,11 @@ def build_svg() -> str:
         fill="{WHITE}" opacity="0.22"/>
 
   {pastor_gold(pastor_x + 68, pastor_y + 82, 1.0)}
-  {T(pastor_x + 110, pastor_y + 48, "Ny Mpitandrina:", size=13, fill=GOLD, weight="600")}
-  {T(pastor_x + 110, pastor_y + 80, "RANDRIANARIZANANY", size=22, fill=WHITE, weight="800")}
-  {T(pastor_x + 110, pastor_y + 106, "Lovasoa Fenomanana", size=15, fill=WHITE, weight="500", family="Open Sans")}
-  {ico_phone(pastor_x + 124, pastor_y + 136)}
-  {T(pastor_x + 144, pastor_y + 141, "Tel : 038 92 546 27  /  033 20 968 28", size=14, fill=WHITE, weight="600")}
+  {T(pastor_x + 110, pastor_y + 48, "Ny Mpitandrina:", size=14, fill=GOLD, weight="600")}
+  {T(pastor_x + 110, pastor_y + 80, "RANDRIANARIZANANY", size=24, fill=WHITE, weight="800")}
+  {T(pastor_x + 110, pastor_y + 108, "Lovasoa Fenomanana", size=16, fill=WHITE, weight="500", family="Open Sans")}
+  {ico_phone(pastor_x + 124, pastor_y + 138)}
+  {T(pastor_x + 144, pastor_y + 143, "Tel : 038 92 546 27  /  033 20 968 28", size=15, fill=WHITE, weight="600")}
 </svg>
 """
 
