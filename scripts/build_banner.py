@@ -31,7 +31,7 @@ GREEN = "#278A3D"
 BLUE = "#1B6CA8"
 
 W, H = 3000, 700
-PHOTO_X = 1880  # photo starts earlier → more presence
+PHOTO_X = 2080  # photo more to the right — background, not dominant
 PHOTO_W = W - PHOTO_X
 
 
@@ -202,8 +202,8 @@ def build_svg() -> str:
         ("ALAHADY", "9", "09:00", "9 ora maraina"),
     ]
 
-    content_w = PHOTO_X - 40  # ~1840
-    card_w, gap = 400, 20
+    content_w = PHOTO_X - 50
+    card_w, gap = 450, 22
     total = 4 * card_w + 3 * gap
     x0 = max(50, (content_w - total) / 2)
     cards_y = 350
@@ -223,34 +223,63 @@ def build_svg() -> str:
       <stop offset="0%" stop-color="{IVORY}"/>
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
-    <!-- Wide soft fade into photo -->
+    <!-- Soft fade: content dominates, photo stays BACKGROUND -->
     <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="{IVORY}" stop-opacity="1"/>
-      <stop offset="45%" stop-color="{IVORY}" stop-opacity="0.75"/>
-      <stop offset="78%" stop-color="{IVORY}" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="{IVORY}" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="{IVORY}" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="photoWash" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3A1505" stop-opacity="0.25"/>
-      <stop offset="40%" stop-color="#3A1505" stop-opacity="0.05"/>
-      <stop offset="75%" stop-color="{NAVY}" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="{NAVY}" stop-opacity="0.78"/>
+      <stop offset="0%" stop-color="{NAVY}" stop-opacity="0.22"/>
+      <stop offset="35%" stop-color="{NAVY}" stop-opacity="0.02"/>
+      <stop offset="78%" stop-color="{NAVY}" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="{NAVY}" stop-opacity="0.40"/>
     </linearGradient>
+    <!-- Rounded frame for photo panel like reference -->
     <clipPath id="rightClip">
-      <rect x="{PHOTO_X}" y="0" width="{PHOTO_W}" height="{H}"/>
+      <path d="M{PHOTO_X + 40} 28
+               Q{PHOTO_X + 40} 12 {PHOTO_X + 56} 12
+               L{W - 28} 12
+               Q{W - 12} 12 {W - 12} 28
+               L{W - 12} {H - 28}
+               Q{W - 12} {H - 12} {W - 28} {H - 12}
+               L{PHOTO_X + 56} {H - 12}
+               Q{PHOTO_X + 40} {H - 12} {PHOTO_X + 40} {H - 28}
+               Z"/>
     </clipPath>
   </defs>
 
   <rect width="{W}" height="{H}" fill="url(#pageBg)"/>
 
-  <!-- FULL-HEIGHT RIGHT PHOTO -->
+  <!-- RIGHT PHOTO as BACKGROUND (atmospheric, framed) -->
   <g clip-path="url(#rightClip)">
-    <image x="{PHOTO_X - 60}" y="-20" width="{PHOTO_W + 120}" height="{H + 40}"
-           preserveAspectRatio="xMidYMid slice" xlink:href="{photo}"/>
+    <image x="{PHOTO_X + 40}" y="12" width="{PHOTO_W - 52}" height="{H - 24}"
+           preserveAspectRatio="xMidYMid slice" xlink:href="{photo}" opacity="0.95"/>
     <rect x="{PHOTO_X}" y="0" width="{PHOTO_W}" height="{H}" fill="url(#photoWash)"/>
   </g>
-  <!-- Soft wide gradient blend -->
-  <rect x="{PHOTO_X - 220}" y="0" width="340" height="{H}" fill="url(#fadeL)"/>
+  <!-- Soft blend — narrow so photo stays clean -->
+  <rect x="{PHOTO_X - 40}" y="0" width="120" height="{H}" fill="url(#fadeL)"/>
+  <!-- Navy + gold curved frame (like reference capture) -->
+  <path d="M{PHOTO_X + 40} 28
+           Q{PHOTO_X + 40} 12 {PHOTO_X + 56} 12
+           L{W - 28} 12
+           Q{W - 12} 12 {W - 12} 28
+           L{W - 12} {H - 28}
+           Q{W - 12} {H - 12} {W - 28} {H - 12}
+           L{PHOTO_X + 56} {H - 12}
+           Q{PHOTO_X + 40} {H - 12} {PHOTO_X + 40} {H - 28}
+           Z"
+        fill="none" stroke="{NAVY}" stroke-width="14"/>
+  <path d="M{PHOTO_X + 48} 34
+           Q{PHOTO_X + 48} 20 {PHOTO_X + 62} 20
+           L{W - 34} 20
+           Q{W - 20} 20 {W - 20} 34
+           L{W - 20} {H - 34}
+           Q{W - 20} {H - 20} {W - 34} {H - 20}
+           L{PHOTO_X + 62} {H - 20}
+           Q{PHOTO_X + 48} {H - 20} {PHOTO_X + 48} {H - 34}
+           Z"
+        fill="none" stroke="{GOLD}" stroke-width="2.5"/>
 
   <!-- TOP BAR -->
   <rect x="0" y="0" width="{PHOTO_X + 30}" height="36" fill="{NAVY}"/>
@@ -283,12 +312,20 @@ def build_svg() -> str:
   {T(930, 235, "6  ·  7  ·  8  ·  9", size=28, fill=NAVY, weight="800", anchor="middle")}
   {T(1110, 235, "AOGOSITRA 2026", size=24, fill=NAVY, weight="800")}
 
-  {ico_flame(1420, 198)}
-  {T(1445, 203, "Ho famonjena fanahin'olona", size=14.5, fill=NAVY, weight="700")}
-  {ico_star(1420, 232)}
-  {T(1445, 237, "Ho fanasitranana ny aretina", size=14.5, fill=NAVY, weight="700")}
-  {ico_leaf(1420, 266)}
-  {T(1445, 271, "Ho fiainana mandrakizay ho anao", size=14.5, fill=NAVY, weight="700")}
+  <!-- Benefit pills like reference -->
+  <g>
+    <rect x="1380" y="185" width="480" height="38" rx="10" fill="{WHITE}" stroke="{LINE}" stroke-width="1.3"/>
+    {ico_flame(1405, 204)}
+    {T(1430, 209, "Ho famonjena fanahin'olona", size=14, fill=NAVY, weight="700")}
+
+    <rect x="1380" y="228" width="480" height="38" rx="10" fill="{WHITE}" stroke="{LINE}" stroke-width="1.3"/>
+    {ico_star(1405, 247)}
+    {T(1430, 252, "Ho fanasitranana ny aretina", size=14, fill=NAVY, weight="700")}
+
+    <rect x="1380" y="271" width="480" height="38" rx="10" fill="{WHITE}" stroke="{LINE}" stroke-width="1.3"/>
+    {ico_leaf(1405, 290)}
+    {T(1430, 295, "Ho fiainana mandrakizay ho anao", size=14, fill=NAVY, weight="700")}
+  </g>
 
   <!-- Timeline label -->
   <line x1="55" y1="295" x2="{content_w}" y2="295" stroke="{LINE}" stroke-width="1.4"/>
@@ -322,7 +359,7 @@ def build_svg() -> str:
   {phone(1155, 655)}
   {T(1180, 660, "038 92 546 27  ·  033 20 968 28", size=14.5, fill=WHITE, weight="600")}
 
-  {T(W - 50, 665, "Tongava!", size=30, fill=WHITE, weight="400",
+  {T(W - 55, 660, "Tongava!", size=26, fill=WHITE, weight="400",
      family="Dancing Script", anchor="end")}
 </svg>
 """
