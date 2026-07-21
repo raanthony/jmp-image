@@ -291,9 +291,10 @@ def build_svg() -> str:
         day_labels.append(T(cx, 472, name, size=24, fill=GOLD, weight="800", tracking="1.5", anchor="middle"))
         day_labels.append(T(cx, 500, time_s, size=20, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
 
-    # Invite card — same width as timeline, refined look
-    invite_x = left_x0
-    invite_w = left_w
+    # Invite card — nearly timeline width, with left margin breathing room
+    invite_margin_l = 48
+    invite_x = left_x0 + invite_margin_l
+    invite_w = left_w - invite_margin_l
     invite_y = 238
     invite_h = 142
     div_x = invite_x + invite_w * 0.56
