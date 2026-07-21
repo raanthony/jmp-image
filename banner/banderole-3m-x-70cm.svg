@@ -221,7 +221,7 @@
   <!-- CTA: bursts LEFT and RIGHT of the phrase, same vertical center -->
   <g>
     
-    <g transform="translate(620.0,662.0) scale(1.05,1.05) translate(8,-2)" fill="#C97B14">
+    <g transform="translate(460.0,662.0) scale(1.15,1.15) translate(8,-2)" fill="#C97B14">
       <path d="M-14 -18 C-10 -18 -8 -10 -8 -2 C-8 6 -10 14 -14 16 C-16 10 -17 2 -17 -2
                C-17 -10 -16 -18 -14 -18 Z" opacity="0.5"/>
       <ellipse cx="-12.5" cy="-4" rx="4.2" ry="12" opacity="0.85"/>
@@ -233,14 +233,14 @@
       <path d="M2 8 C12 14 24 20 38 24 C24 18 12 12 2 8 Z" opacity="0.65"/>
       <circle cx="1" cy="1" r="3.8" opacity="1"/>
     </g>
-    <text x="1180.0" y="672.0" text-anchor="middle"
+    <text x="1180.0" y="676.0" text-anchor="middle"
           font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-          font-size="34" font-weight="400" dominant-baseline="alphabetic">
+          font-size="44" font-weight="400" dominant-baseline="alphabetic">
       <tspan fill="#FFFFFF">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
       <tspan fill="#C97B14">tongava handray ny anjaranao!</tspan>
     </text>
     
-    <g transform="translate(1740.0,662.0) scale(-1.05,1.05) translate(8,-2)" fill="#C97B14">
+    <g transform="translate(1900.0,662.0) scale(-1.15,1.15) translate(8,-2)" fill="#C97B14">
       <path d="M-14 -18 C-10 -18 -8 -10 -8 -2 C-8 6 -10 14 -14 16 C-16 10 -17 2 -17 -2
                C-17 -10 -16 -18 -14 -18 Z" opacity="0.5"/>
       <ellipse cx="-12.5" cy="-4" rx="4.2" ry="12" opacity="0.85"/>

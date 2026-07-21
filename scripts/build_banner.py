@@ -304,9 +304,10 @@ def build_svg() -> str:
     cta_cx = pastor_x / 2
     # Footer midline — bursts share the same vertical center as the script text
     cta_mid_y = foot_y + foot_h / 2 + 2
-    cta_text_y = cta_mid_y + 10  # baseline slightly below visual center
-    # Place bursts just outside the phrase (left / right), not below
-    cta_burst_dx = 560
+    cta_text_y = cta_mid_y + 14  # baseline for larger script
+    cta_font = 44
+    # Place bursts just outside the wider phrase (left / right)
+    cta_burst_dx = 720
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -407,14 +408,14 @@ def build_svg() -> str:
 
   <!-- CTA: bursts LEFT and RIGHT of the phrase, same vertical center -->
   <g>
-    {burst(cta_cx - cta_burst_dx, cta_mid_y, False, 1.05)}
+    {burst(cta_cx - cta_burst_dx, cta_mid_y, False, 1.15)}
     <text x="{cta_cx}" y="{cta_text_y}" text-anchor="middle"
           font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-          font-size="34" font-weight="400" dominant-baseline="alphabetic">
+          font-size="{cta_font}" font-weight="400" dominant-baseline="alphabetic">
       <tspan fill="{WHITE}">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
       <tspan fill="{GOLD}">tongava handray ny anjaranao!</tspan>
     </text>
-    {burst(cta_cx + cta_burst_dx, cta_mid_y, True, 1.05)}
+    {burst(cta_cx + cta_burst_dx, cta_mid_y, True, 1.15)}
   </g>
 
   <path d="M{pastor_x} {pastor_y + r_tl}
