@@ -192,34 +192,31 @@ def benefit_on_bg(x, y, w, h, icon_fn, label):
 
 
 def day_row_item(x, y, w, num, place):
-    """Premium timeline column — day number left, venue right."""
-    # Left block: calendar + date number
-    left_cx = x + w * 0.24
-    # Right block: larger pin with clear gap before venue text
-    pin_x = x + w * 0.44
-    pin_s = 2.8
+    """Timeline column — larger type; date left, venue right."""
+    left_cx = x + w * 0.22
+    pin_x = x + w * 0.42
+    pin_s = 2.6
     pin_half = 9.5 * pin_s
-    text_x = pin_x + pin_half + 28  # generous gap — no overlap with text
+    text_x = pin_x + pin_half + 22
     lines = []
-    ly = y + 26
+    ly = y + 28
     for i, line in enumerate(place):
         if not line:
             continue
         if i == 0:
-            fill, wt, sz = INK, "600", 17.5
+            fill, wt, sz = INK, "600", 20
         elif i == 1:
-            fill, wt, sz = NAVY, "800", 18.5
+            fill, wt, sz = NAVY, "800", 21
         else:
-            fill, wt, sz = MUTED, "600", 16
+            fill, wt, sz = MUTED, "600", 18
         lines.append(T(text_x, ly, line, size=sz, fill=fill, weight=wt, family="Open Sans"))
-        ly += 24
-    # Align pin with first venue line (visual center)
-    pin_cy = y + 28
+        ly += 26
+    pin_cy = y + 30
     return f"""
     <g>
-      {ico_cal_grid(left_cx - 40, y + 34, 2.1)}
-      {T(left_cx - 2, y + 50, str(num), size=68, fill=NAVY, weight="800")}
-      {T(left_cx - 2, y + 80, "Aogositra", size=18, fill=MUTED, weight="600", family="Open Sans")}
+      {ico_cal_grid(left_cx - 36, y + 36, 2.2)}
+      {T(left_cx, y + 52, str(num), size=62, fill=NAVY, weight="800")}
+      {T(left_cx, y + 82, "Aogositra", size=19, fill=MUTED, weight="600", family="Open Sans")}
       {ico_pin(pin_x, pin_cy, pin_s, fill=BLUE)}
       {"".join(lines)}
     </g>"""
@@ -252,9 +249,9 @@ def build_svg() -> str:
     left_cx = left_x0 + left_w / 2
 
     x0 = left_x0
-    gap = 14
+    gap = 12
     item_w = (content_right - x0 - 3 * gap) / 4
-    timeline_y = 526
+    timeline_y = 518
     items = []
     for i, (num, place) in enumerate(zip(day_nums, places)):
         xi = x0 + i * (item_w + gap)
@@ -262,7 +259,7 @@ def build_svg() -> str:
         if i < 3:
             items.append(
                 f'<line x1="{xi + item_w + gap/2}" y1="{timeline_y}" '
-                f'x2="{xi + item_w + gap/2}" y2="{timeline_y + 88}" '
+                f'x2="{xi + item_w + gap/2}" y2="{timeline_y + 96}" '
                 f'stroke="{LINE}" stroke-width="1.8"/>'
             )
     timeline = "\n".join(items)
@@ -293,8 +290,8 @@ def build_svg() -> str:
     for i, (name, time_s) in enumerate(zip(day_names, day_times)):
         xi = x0 + i * (item_w + gap)
         cx = xi + item_w / 2
-        day_labels.append(T(cx, 472, name, size=24, fill=GOLD, weight="800", tracking="1.5", anchor="middle"))
-        day_labels.append(T(cx, 500, time_s, size=20, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
+        day_labels.append(T(cx, 462, name, size=28, fill=GOLD, weight="800", tracking="1.2", anchor="middle"))
+        day_labels.append(T(cx, 492, time_s, size=22, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
 
     # Invite card — nearly timeline width, with left margin breathing room
     invite_margin_l = 48
@@ -410,7 +407,7 @@ def build_svg() -> str:
   <circle cx="{div_x}" cy="{invite_y + invite_h / 2}" r="4" fill="{GOLD}"/>
   <text x="{right_cx}" y="{invite_y + 42}" text-anchor="middle"
         font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="20" font-weight="600" fill="{MUTED}">hanatrika ny Fitoriana Filazantsara Lehibe, iza atao ny</text>
+        font-size="20" font-weight="600" fill="{MUTED}">hanatrika ny Fitoriana Filazantsara Lehibe, izay atao ny</text>
   <rect x="{right_cx - 268}" y="{invite_y + 56}" width="320" height="62" rx="16" fill="{GOLD}"/>
   <text x="{right_cx - 108}" y="{invite_y + 98}" text-anchor="middle"
         font-family="Montserrat, DejaVu Sans, sans-serif"
