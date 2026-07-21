@@ -179,12 +179,15 @@ def burst(cx, cy, flip=False, s=1.0):
     </g>"""
 
 
-def benefit_on_bg(x, y, w, icon_fn, label):
+def benefit_on_bg(x, y, w, h, icon_fn, label):
+    """Benefit pill on photo panel — larger type, clear icon."""
+    cy = y + h / 2
+    icon_r = 18
     return f"""
     <g>
-      <rect x="{x}" y="{y}" width="{w}" height="60" rx="30" fill="{WHITE}" opacity="0.97"/>
-      {icon_fn(x + 32, y + 30, 16)}
-      {T(x + 58, y + 38, label, size=17.5, fill=NAVY, weight="700")}
+      <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h/2}" fill="{WHITE}" opacity="0.97"/>
+      {icon_fn(x + 38, cy, icon_r)}
+      {T(x + 68, cy + 7, label, size=21, fill=NAVY, weight="700")}
     </g>"""
 
 
@@ -264,24 +267,26 @@ def build_svg() -> str:
             )
     timeline = "\n".join(items)
 
-    # Pastor flush right — narrower & shorter
+    # Pastor flush right — left edge aligned with benefit pills
     foot_y = 620
     foot_h = H - foot_y
-    pastor_w, pastor_h = 640, 138
-    pastor_x = W - pastor_w
-    pastor_y = 552
+    # Benefits + pastor share the same left edge
+    bx = PHOTO_X + 18
+    bw = W - bx - 16  # stretch to near right edge
+    pastor_x = bx
+    pastor_w = bw
+    pastor_h = 148
+    pastor_y = 540
     r_tl = 42
 
-    bx = PHOTO_X + 28
-    bw = PHOTO_W - 48
-    pill_h, pill_gap, n_pills = 60, 18, 3
+    pill_h, pill_gap, n_pills = 74, 20, 3
     stack_h = n_pills * pill_h + (n_pills - 1) * pill_gap
-    zone_top, zone_bot = 52, pastor_y - 14
+    zone_top, zone_bot = 52, pastor_y - 16
     ben_y0 = zone_top + max(0, (zone_bot - zone_top - stack_h) / 2)
     benefits = "\n".join([
-        benefit_on_bg(bx, ben_y0, bw, ico_flame, "Ho famonjena fanahin'olona"),
-        benefit_on_bg(bx, ben_y0 + pill_h + pill_gap, bw, ico_star, "Ho fanasitranana ny aretina"),
-        benefit_on_bg(bx, ben_y0 + 2 * (pill_h + pill_gap), bw, ico_leaf, "Ho fiainana mandrakizay ho anao"),
+        benefit_on_bg(bx, ben_y0, bw, pill_h, ico_flame, "Ho famonjena fanahin'olona"),
+        benefit_on_bg(bx, ben_y0 + pill_h + pill_gap, bw, pill_h, ico_star, "Ho fanasitranana ny aretina"),
+        benefit_on_bg(bx, ben_y0 + 2 * (pill_h + pill_gap), bw, pill_h, ico_leaf, "Ho fiainana mandrakizay ho anao"),
     ])
 
     day_labels = []
@@ -454,12 +459,12 @@ def build_svg() -> str:
            l2.8 7 7.5 1 -5.4 4.6 1.6 7.5 -6.5 -3.5 -6.5 3.5 1.6 -7.5 -5.4 -4.6 7.5 -1 z"
         fill="{WHITE}" opacity="0.22"/>
 
-  {pastor_gold(pastor_x + 58, pastor_y + 72, 0.92)}
-  {T(pastor_x + 98, pastor_y + 42, "Ny Mpitandrina:", size=15, fill=GOLD, weight="600")}
-  {T(pastor_x + 98, pastor_y + 70, "RANDRIANARIZANANY", size=22, fill=WHITE, weight="800")}
-  {T(pastor_x + 98, pastor_y + 96, "Lovasoa Fenomanana", size=16, fill=WHITE, weight="500", family="Open Sans")}
-  {ico_phone(pastor_x + 112, pastor_y + 122, s=1.1)}
-  {T(pastor_x + 132, pastor_y + 128, "Tel : 038 92 546 27  /  033 20 968 28", size=15, fill=WHITE, weight="600")}
+  {pastor_gold(pastor_x + 62, pastor_y + 76, 1.0)}
+  {T(pastor_x + 108, pastor_y + 44, "Ny Mpitandrina:", size=16, fill=GOLD, weight="600")}
+  {T(pastor_x + 108, pastor_y + 74, "RANDRIANARIZANANY", size=24, fill=WHITE, weight="800")}
+  {T(pastor_x + 108, pastor_y + 102, "Lovasoa Fenomanana", size=17, fill=WHITE, weight="500", family="Open Sans")}
+  {ico_phone(pastor_x + 122, pastor_y + 128, s=1.15)}
+  {T(pastor_x + 144, pastor_y + 134, "Tel : 038 92 546 27  /  033 20 968 28", size=16, fill=WHITE, weight="600")}
 </svg>
 """
 
