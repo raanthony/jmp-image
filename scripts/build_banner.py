@@ -223,7 +223,7 @@ def build_svg() -> str:
     # Lieux officiels — Alakamisy / Zoma / Sabotsy / Alahady
     places = [
         ["ao @ Fiangonana", "JESOSY MPAMONJY", "MORAFENO"],
-        ["eo amin'ny tany malalaky", "ny Travaux Ankehitriny", ""],
+        ["eo amin'ny tany malalaky", "ny Travaux Ankeniheny", ""],
         ["eo Antamponivinany", "", ""],
         ["ao @ espace Ny ANJARA", "Vatovory", "Fotoam-pivavahana lehibe"],
     ]
@@ -245,7 +245,7 @@ def build_svg() -> str:
     x0 = left_x0
     gap = 14
     item_w = (content_right - x0 - 3 * gap) / 4
-    timeline_y = 488
+    timeline_y = 512
     items = []
     for i, (num, place) in enumerate(zip(day_nums, places)):
         xi = x0 + i * (item_w + gap)
@@ -259,11 +259,11 @@ def build_svg() -> str:
     timeline = "\n".join(items)
 
     # Pastor flush right — narrower & shorter
-    foot_y = 612
+    foot_y = 620
     foot_h = H - foot_y
-    pastor_w, pastor_h = 640, 145
+    pastor_w, pastor_h = 640, 138
     pastor_x = W - pastor_w
-    pastor_y = 542
+    pastor_y = 552
     r_tl = 42
 
     bx = PHOTO_X + 28
@@ -282,18 +282,27 @@ def build_svg() -> str:
     for i, (name, time_s) in enumerate(zip(day_names, day_times)):
         xi = x0 + i * (item_w + gap)
         cx = xi + item_w / 2
-        day_labels.append(T(cx, 422, name, size=26, fill=GOLD, weight="800", tracking="1.5", anchor="middle"))
-        day_labels.append(T(cx, 452, time_s, size=21, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
+        day_labels.append(T(cx, 458, name, size=24, fill=GOLD, weight="800", tracking="1.5", anchor="middle"))
+        day_labels.append(T(cx, 486, time_s, size=20, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
 
     invite_w = min(1780, left_w - 20)
     invite_x = left_cx - invite_w / 2
-    invite_y = 232
-    invite_h = 138
+    invite_y = 240
+    invite_h = 130
     div_x = invite_x + invite_w * 0.52
     right_cx = (div_x + invite_x + invite_w) / 2
 
+    # FANDAHARAM-POTOANA orange pill (clear of day names below)
+    fand_label = "FANDAHARAM-POTOANA"
+    fand_w = 460
+    fand_h = 38
+    fand_x = left_cx - fand_w / 2
+    fand_y = 378
+
     cta_cx = pastor_x / 2
-    cta_y = foot_y + foot_h / 2 + 8
+    cta_y = foot_y + foot_h / 2 + 6
+    # Bursts frame the CTA phrase (start / end), not far corners
+    cta_burst_dx = 600
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -339,52 +348,52 @@ def build_svg() -> str:
      size=22, fill=WHITE, weight="700", tracking="5", anchor="middle")}
 
   <!-- ===== LEFT CONTENT — centered as a group ===== -->
-  {logo(left_cx - 700, 122, 2.2)}
-  <text x="{left_cx + 40}" y="122" text-anchor="middle"
+  {logo(left_cx - 820, 100, 1.85)}
+  <text x="{left_cx + 60}" y="118" text-anchor="middle"
         font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="64" font-weight="800" letter-spacing="1.1">
     <tspan fill="{NAVY}">FITORIANA FILAZANTSARA</tspan>
     <tspan dx="28" fill="url(#lehibeGrad)">LEHIBE</tspan>
   </text>
 
-  <text x="{left_cx}" y="174" text-anchor="middle"
+  <text x="{left_cx + 70}" y="184" text-anchor="middle"
         font-family="Open Sans, DejaVu Sans, sans-serif"
-        font-size="26" font-weight="400" font-style="italic" fill="{INK}">
+        font-size="24" font-weight="400" font-style="italic" fill="{INK}">
     “ Ary hoy Izy taminy: Mandehana any amin'izao tontolo izao ianareo, ka mitoria ny filazantsara amin'ny olombelona rehetra. ”
   </text>
-  {ico_book(left_cx - 88, 204, 1.4)}
-  <text x="{left_cx + 8}" y="210" text-anchor="middle"
+  {ico_book(left_cx - 175, 214, 1.25)}
+  <text x="{left_cx + 45}" y="220" text-anchor="middle"
         font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="22" font-weight="800" fill="{GOLD}">Marka 16:15</text>
-  <rect x="{left_cx - 72}" y="222" width="144" height="4" rx="2" fill="{GOLD}"/>
+        font-size="22" font-weight="800" fill="{GOLD}" letter-spacing="0.5">Marka 16:15</text>
+  <rect x="{left_cx - 35}" y="232" width="144" height="4" rx="2" fill="{GOLD}"/>
 
   <!-- Invite two-column block centered -->
   <rect x="{invite_x}" y="{invite_y}" width="{invite_w}" height="{invite_h}" rx="18"
         fill="#F7F9FC" stroke="{LINE}" stroke-width="1.4"/>
-  {people(invite_x + 62, invite_y + 70, 2.0)}
-  <text x="{invite_x + 130}" y="{invite_y + 40}" font-family="Open Sans, DejaVu Sans, sans-serif"
+  {people(invite_x + 62, invite_y + 66, 2.0)}
+  <text x="{invite_x + 130}" y="{invite_y + 38}" font-family="Open Sans, DejaVu Sans, sans-serif"
         font-size="22" font-weight="600" fill="{MUTED}">Ny Mpitandrina sy ny fiangonana</text>
-  <text x="{invite_x + 130}" y="{invite_y + 74}" font-family="Montserrat, DejaVu Sans, sans-serif"
+  <text x="{invite_x + 130}" y="{invite_y + 70}" font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="26" font-weight="800" fill="{NAVY}">JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
-  <text x="{invite_x + 130}" y="{invite_y + 108}" font-family="Open Sans, DejaVu Sans, sans-serif"
+  <text x="{invite_x + 130}" y="{invite_y + 102}" font-family="Open Sans, DejaVu Sans, sans-serif"
         font-size="22" font-weight="700" fill="{GOLD}">dia faly manasa antsika rehetra</text>
   <line x1="{div_x}" y1="{invite_y + 16}" x2="{div_x}" y2="{invite_y + invite_h - 16}"
         stroke="{LINE}" stroke-width="1.6"/>
-  <text x="{right_cx}" y="{invite_y + 40}" text-anchor="middle"
+  <text x="{right_cx}" y="{invite_y + 38}" text-anchor="middle"
         font-family="Open Sans, DejaVu Sans, sans-serif"
         font-size="20" font-weight="600" fill="{MUTED}">hanatrika ny Fitoriana Filazantsara Lehibe, iza atao ny</text>
-  <rect x="{right_cx - 250}" y="{invite_y + 54}" width="300" height="60" rx="14" fill="{GOLD}"/>
-  <text x="{right_cx - 100}" y="{invite_y + 94}" text-anchor="middle"
+  <rect x="{right_cx - 250}" y="{invite_y + 50}" width="300" height="58" rx="14" fill="{GOLD}"/>
+  <text x="{right_cx - 100}" y="{invite_y + 88}" text-anchor="middle"
         font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="32" font-weight="800" fill="{NAVY}">6  ·  7  ·  8  ·  9</text>
-  <text x="{right_cx + 80}" y="{invite_y + 78}" font-family="Montserrat, DejaVu Sans, sans-serif"
+  <text x="{right_cx + 80}" y="{invite_y + 74}" font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="24" font-weight="800" fill="{NAVY}">AOGOSITRA</text>
-  <text x="{right_cx + 80}" y="{invite_y + 108}" font-family="Montserrat, DejaVu Sans, sans-serif"
+  <text x="{right_cx + 80}" y="{invite_y + 102}" font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="28" font-weight="800" fill="{NAVY}">2026</text>
 
-  <!-- Schedule header — centered, one line -->
-  <line x1="{left_x0}" y1="382" x2="{content_right}" y2="382" stroke="{LINE}" stroke-width="1.8"/>
-  {T(left_cx, 408, "FANDAHARAM-POTOANA", size=26, fill=GOLD, weight="800", tracking="3", anchor="middle")}
+  <!-- Schedule header — orange pill, clear of day names -->
+  <rect x="{fand_x}" y="{fand_y}" width="{fand_w}" height="{fand_h}" rx="21" fill="{GOLD}"/>
+  {T(left_cx, fand_y + 28, fand_label, size=20, fill=NAVY, weight="800", tracking="4", anchor="middle")}
 
   {"".join(day_labels)}
   {timeline}
@@ -392,14 +401,14 @@ def build_svg() -> str:
   <rect x="0" y="{foot_y}" width="{W}" height="{foot_h}" fill="{NAVY}"/>
   <rect x="0" y="{foot_y}" width="{W}" height="3" fill="{GOLD}"/>
 
-  {burst(cta_cx - 740, cta_y, False, 1.25)}
-  <text x="{cta_cx}" y="{cta_y + 10}" text-anchor="middle"
+  {burst(cta_cx - cta_burst_dx, cta_y, False, 0.95)}
+  <text x="{cta_cx}" y="{cta_y + 8}" text-anchor="middle"
         font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-        font-size="48" font-weight="400">
+        font-size="34" font-weight="400">
     <tspan fill="{WHITE}">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
     <tspan fill="{GOLD}">tongava handray ny anjaranao!</tspan>
   </text>
-  {burst(cta_cx + 740, cta_y, True, 1.25)}
+  {burst(cta_cx + cta_burst_dx, cta_y, True, 0.95)}
 
   <path d="M{pastor_x} {pastor_y + r_tl}
            Q{pastor_x} {pastor_y} {pastor_x + r_tl} {pastor_y}
