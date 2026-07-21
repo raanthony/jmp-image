@@ -190,30 +190,34 @@ def benefit_on_bg(x, y, w, icon_fn, label):
 
 def day_row_item(x, y, w, num, place):
     """Premium timeline column — day number left, venue right."""
-    cx = x + w / 2
     # Left block: calendar + date number
-    left_cx = x + w * 0.28
-    # Right block: pin + venue lines
-    right_x = x + w * 0.48
+    left_cx = x + w * 0.24
+    # Right block: larger pin with clear gap before venue text
+    pin_x = x + w * 0.44
+    pin_s = 2.8
+    pin_half = 9.5 * pin_s
+    text_x = pin_x + pin_half + 28  # generous gap — no overlap with text
     lines = []
-    ly = y + 24
+    ly = y + 26
     for i, line in enumerate(place):
         if not line:
             continue
         if i == 0:
-            fill, wt, sz = INK, "600", 18
+            fill, wt, sz = INK, "600", 17.5
         elif i == 1:
-            fill, wt, sz = NAVY, "800", 19
+            fill, wt, sz = NAVY, "800", 18.5
         else:
-            fill, wt, sz = MUTED, "600", 16.5
-        lines.append(T(right_x + 22, ly, line, size=sz, fill=fill, weight=wt, family="Open Sans"))
+            fill, wt, sz = MUTED, "600", 16
+        lines.append(T(text_x, ly, line, size=sz, fill=fill, weight=wt, family="Open Sans"))
         ly += 24
+    # Align pin with first venue line (visual center)
+    pin_cy = y + 28
     return f"""
     <g>
-      {ico_cal_grid(left_cx - 38, y + 32, 2.0)}
-      {T(left_cx - 4, y + 48, str(num), size=70, fill=NAVY, weight="800")}
-      {T(left_cx - 4, y + 78, "Aogositra", size=19, fill=MUTED, weight="600", family="Open Sans")}
-      {ico_pin(right_x + 8, y + 18, 1.4, fill=BLUE)}
+      {ico_cal_grid(left_cx - 40, y + 34, 2.1)}
+      {T(left_cx - 2, y + 50, str(num), size=68, fill=NAVY, weight="800")}
+      {T(left_cx - 2, y + 80, "Aogositra", size=18, fill=MUTED, weight="600", family="Open Sans")}
+      {ico_pin(pin_x, pin_cy, pin_s, fill=BLUE)}
       {"".join(lines)}
     </g>"""
 
