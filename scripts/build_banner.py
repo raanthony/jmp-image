@@ -251,7 +251,7 @@ def build_svg() -> str:
     x0 = left_x0
     gap = 14
     item_w = (content_right - x0 - 3 * gap) / 4
-    timeline_y = 512
+    timeline_y = 526
     items = []
     for i, (num, place) in enumerate(zip(day_nums, places)):
         xi = x0 + i * (item_w + gap)
@@ -288,22 +288,26 @@ def build_svg() -> str:
     for i, (name, time_s) in enumerate(zip(day_names, day_times)):
         xi = x0 + i * (item_w + gap)
         cx = xi + item_w / 2
-        day_labels.append(T(cx, 458, name, size=24, fill=GOLD, weight="800", tracking="1.5", anchor="middle"))
-        day_labels.append(T(cx, 486, time_s, size=20, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
+        day_labels.append(T(cx, 472, name, size=24, fill=GOLD, weight="800", tracking="1.5", anchor="middle"))
+        day_labels.append(T(cx, 500, time_s, size=20, fill=MUTED, weight="600", family="Open Sans", anchor="middle"))
 
-    invite_w = min(1780, left_w - 20)
-    invite_x = left_cx - invite_w / 2
-    invite_y = 240
-    invite_h = 130
-    div_x = invite_x + invite_w * 0.52
+    # Invite card — same width as timeline, refined look
+    invite_x = left_x0
+    invite_w = left_w
+    invite_y = 238
+    invite_h = 142
+    div_x = invite_x + invite_w * 0.56
     right_cx = (div_x + invite_x + invite_w) / 2
+    # Left column content anchors
+    invite_icon_cx = invite_x + 72
+    invite_text_x = invite_x + 148
 
     # FANDAHARAM-POTOANA orange pill (clear of day names below)
     fand_label = "FANDAHARAM-POTOANA"
     fand_w = 460
     fand_h = 38
     fand_x = left_cx - fand_w / 2
-    fand_y = 378
+    fand_y = 396
 
     cta_cx = pastor_x / 2
     # Footer midline — bursts share the same vertical center as the script text
@@ -340,6 +344,9 @@ def build_svg() -> str:
       <stop offset="88%" stop-color="{GOLD}"/>
       <stop offset="100%" stop-color="#B87518"/>
     </linearGradient>
+    <filter id="inviteShadow" x="-2%" y="-12%" width="104%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4.5" flood-color="#071A36" flood-opacity="0.12"/>
+    </filter>
   </defs>
 
   <rect width="{W}" height="{H}" fill="url(#pageBg)"/>
@@ -376,28 +383,35 @@ def build_svg() -> str:
         font-size="22" font-weight="800" fill="{GOLD}" letter-spacing="0.5">Marka 16:15</text>
   <rect x="{left_cx - 35}" y="232" width="144" height="4" rx="2" fill="{GOLD}"/>
 
-  <!-- Invite two-column block centered -->
-  <rect x="{invite_x}" y="{invite_y}" width="{invite_w}" height="{invite_h}" rx="18"
-        fill="#F7F9FC" stroke="{LINE}" stroke-width="1.4"/>
-  {people(invite_x + 62, invite_y + 66, 2.0)}
-  <text x="{invite_x + 130}" y="{invite_y + 38}" font-family="Open Sans, DejaVu Sans, sans-serif"
+  <!-- Invite card — full timeline width, refined -->
+  <rect x="{invite_x}" y="{invite_y}" width="{invite_w}" height="{invite_h}" rx="20"
+        fill="#FFFFFF" stroke="{LINE}" stroke-width="1.2" filter="url(#inviteShadow)"/>
+  <!-- Gold accent bar on left -->
+  <rect x="{invite_x}" y="{invite_y + 16}" width="10" height="{invite_h - 32}" rx="5" fill="{GOLD}"/>
+  <!-- Soft inner panel -->
+  <rect x="{invite_x + 18}" y="{invite_y + 10}" width="{invite_w - 28}" height="{invite_h - 20}"
+        rx="14" fill="#F7F9FC"/>
+  {people(invite_icon_cx, invite_y + invite_h / 2, 2.15)}
+  <text x="{invite_text_x}" y="{invite_y + 44}" font-family="Open Sans, DejaVu Sans, sans-serif"
         font-size="22" font-weight="600" fill="{MUTED}">Ny Mpitandrina sy ny fiangonana</text>
-  <text x="{invite_x + 130}" y="{invite_y + 70}" font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="26" font-weight="800" fill="{NAVY}">JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
-  <text x="{invite_x + 130}" y="{invite_y + 102}" font-family="Open Sans, DejaVu Sans, sans-serif"
+  <text x="{invite_text_x}" y="{invite_y + 78}" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="28" font-weight="800" fill="{NAVY}">JESOSY MPAMONJY MORAFENO AMBOSITRA</text>
+  <text x="{invite_text_x}" y="{invite_y + 112}" font-family="Open Sans, DejaVu Sans, sans-serif"
         font-size="22" font-weight="700" fill="{GOLD}">dia faly manasa antsika rehetra</text>
-  <line x1="{div_x}" y1="{invite_y + 16}" x2="{div_x}" y2="{invite_y + invite_h - 16}"
+  <!-- Elegant divider -->
+  <line x1="{div_x}" y1="{invite_y + 28}" x2="{div_x}" y2="{invite_y + invite_h - 28}"
         stroke="{LINE}" stroke-width="1.6"/>
-  <text x="{right_cx}" y="{invite_y + 38}" text-anchor="middle"
+  <circle cx="{div_x}" cy="{invite_y + invite_h / 2}" r="4" fill="{GOLD}"/>
+  <text x="{right_cx}" y="{invite_y + 42}" text-anchor="middle"
         font-family="Open Sans, DejaVu Sans, sans-serif"
         font-size="20" font-weight="600" fill="{MUTED}">hanatrika ny Fitoriana Filazantsara Lehibe, iza atao ny</text>
-  <rect x="{right_cx - 250}" y="{invite_y + 50}" width="300" height="58" rx="14" fill="{GOLD}"/>
-  <text x="{right_cx - 100}" y="{invite_y + 88}" text-anchor="middle"
+  <rect x="{right_cx - 268}" y="{invite_y + 56}" width="320" height="62" rx="16" fill="{GOLD}"/>
+  <text x="{right_cx - 108}" y="{invite_y + 98}" text-anchor="middle"
         font-family="Montserrat, DejaVu Sans, sans-serif"
-        font-size="32" font-weight="800" fill="{NAVY}">6  ·  7  ·  8  ·  9</text>
-  <text x="{right_cx + 80}" y="{invite_y + 74}" font-family="Montserrat, DejaVu Sans, sans-serif"
+        font-size="34" font-weight="800" fill="{NAVY}">6  ·  7  ·  8  ·  9</text>
+  <text x="{right_cx + 92}" y="{invite_y + 82}" font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="24" font-weight="800" fill="{NAVY}">AOGOSITRA</text>
-  <text x="{right_cx + 80}" y="{invite_y + 102}" font-family="Montserrat, DejaVu Sans, sans-serif"
+  <text x="{right_cx + 92}" y="{invite_y + 112}" font-family="Montserrat, DejaVu Sans, sans-serif"
         font-size="28" font-weight="800" fill="{NAVY}">2026</text>
 
   <!-- Schedule header — orange pill, clear of day names -->
