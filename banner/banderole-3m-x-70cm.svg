@@ -40,7 +40,7 @@
 
   
     <g>
-      <rect x="2298" y="157.0" width="686" height="74" rx="37.0" fill="#FFFFFF" opacity="0.97"/>
+      <rect x="2298" y="157.0" width="666" height="74" rx="37.0" fill="#FFFFFF" opacity="0.97"/>
       
     <g transform="translate(2336,194.0)">
       <circle r="18" fill="#C97B14"/>
@@ -52,7 +52,7 @@
     </g>
 
     <g>
-      <rect x="2298" y="251.0" width="686" height="74" rx="37.0" fill="#FFFFFF" opacity="0.97"/>
+      <rect x="2298" y="251.0" width="666" height="74" rx="37.0" fill="#FFFFFF" opacity="0.97"/>
       
     <g transform="translate(2336,288.0)">
       <circle r="18" fill="#1B6CA8"/>
@@ -64,7 +64,7 @@
     </g>
 
     <g>
-      <rect x="2298" y="345.0" width="686" height="74" rx="37.0" fill="#FFFFFF" opacity="0.97"/>
+      <rect x="2298" y="345.0" width="666" height="74" rx="37.0" fill="#FFFFFF" opacity="0.97"/>
       
     <g transform="translate(2336,382.0)">
       <circle r="18" fill="#278A3D"/>
@@ -266,8 +266,8 @@
 
   <path d="M2298 582
            Q2298 540 2340 540
-           L2984 540
-           L2984 688
+           L3000 540
+           L3000 688
            L2298 688
            Z" fill="#071A36"/>
   <path d="M2298 582
@@ -277,7 +277,7 @@
            L2303 688
            L2298 688
            Z" fill="#C97B14"/>
-  <path d="M2948 556
+  <path d="M2964 556
            l2.8 7 7.5 1 -5.4 4.6 1.6 7.5 -6.5 -3.5 -6.5 3.5 1.6 -7.5 -5.4 -4.6 7.5 -1 z"
         fill="#FFFFFF" opacity="0.22"/>
 

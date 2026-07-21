@@ -267,14 +267,14 @@ def build_svg() -> str:
             )
     timeline = "\n".join(items)
 
-    # Pastor flush right — left edge aligned with benefit pills
+    # Pastor flush right — left aligned with benefits, no right margin
     foot_y = 620
     foot_h = H - foot_y
-    # Benefits + pastor share the same left edge
     bx = PHOTO_X + 18
-    bw = W - bx - 16  # stretch to near right edge
+    # Benefits: inset from right edge; pastor: full to right edge
+    bw = W - bx - 36
     pastor_x = bx
-    pastor_w = bw
+    pastor_w = W - pastor_x  # collé à droite, aucune marge
     pastor_h = 148
     pastor_y = 540
     r_tl = 42
