@@ -160,10 +160,12 @@ def pastor_gold(cx, cy, s=1.0):
 
 
 def burst(cx, cy, flip=False, s=1.0):
-    """Gold announcement splash inspired by reference (vector, not copied)."""
+    """Gold announcement splash — rays point toward text; cy = visual center."""
     sx = -s if flip else s
+    # Shift geometry so the ornament's visual center sits on (cx, cy)
+    # (original paths sit slightly low / right of the origin)
     return f"""
-    <g transform="translate({cx},{cy}) scale({sx},{s})" fill="{GOLD}">
+    <g transform="translate({cx},{cy}) scale({sx},{s}) translate(8,-2)" fill="{GOLD}">
       <path d="M-14 -18 C-10 -18 -8 -10 -8 -2 C-8 6 -10 14 -14 16 C-16 10 -17 2 -17 -2
                C-17 -10 -16 -18 -14 -18 Z" opacity="0.5"/>
       <ellipse cx="-12.5" cy="-4" rx="4.2" ry="12" opacity="0.85"/>
@@ -300,9 +302,11 @@ def build_svg() -> str:
     fand_y = 378
 
     cta_cx = pastor_x / 2
-    cta_y = foot_y + foot_h / 2 + 6
-    # Bursts frame the CTA phrase (start / end), not far corners
-    cta_burst_dx = 600
+    # Footer midline — bursts share the same vertical center as the script text
+    cta_mid_y = foot_y + foot_h / 2 + 2
+    cta_text_y = cta_mid_y + 10  # baseline slightly below visual center
+    # Place bursts just outside the phrase (left / right), not below
+    cta_burst_dx = 560
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -401,14 +405,17 @@ def build_svg() -> str:
   <rect x="0" y="{foot_y}" width="{W}" height="{foot_h}" fill="{NAVY}"/>
   <rect x="0" y="{foot_y}" width="{W}" height="3" fill="{GOLD}"/>
 
-  {burst(cta_cx - cta_burst_dx, cta_y, False, 0.95)}
-  <text x="{cta_cx}" y="{cta_y + 8}" text-anchor="middle"
-        font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
-        font-size="34" font-weight="400">
-    <tspan fill="{WHITE}">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
-    <tspan fill="{GOLD}">tongava handray ny anjaranao!</tspan>
-  </text>
-  {burst(cta_cx + cta_burst_dx, cta_y, True, 0.95)}
+  <!-- CTA: bursts LEFT and RIGHT of the phrase, same vertical center -->
+  <g>
+    {burst(cta_cx - cta_burst_dx, cta_mid_y, False, 1.05)}
+    <text x="{cta_cx}" y="{cta_text_y}" text-anchor="middle"
+          font-family="Great Vibes, Dancing Script, DejaVu Sans, sans-serif"
+          font-size="34" font-weight="400" dominant-baseline="alphabetic">
+      <tspan fill="{WHITE}">Anasana antsika rehetra hanatrika izany fotoana lehibe izany, </tspan>
+      <tspan fill="{GOLD}">tongava handray ny anjaranao!</tspan>
+    </text>
+    {burst(cta_cx + cta_burst_dx, cta_mid_y, True, 1.05)}
+  </g>
 
   <path d="M{pastor_x} {pastor_y + r_tl}
            Q{pastor_x} {pastor_y} {pastor_x + r_tl} {pastor_y}
